@@ -24,7 +24,7 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [Aerial Screensaver](https://github.com/JohnCoates/Aerial/releases/download/v1.1/Aerial.zip)
 
 ### Homebrew
-#### Run Xcode and accept the license
+##### Run Xcode and accept the license
 
 Homebrew can not install properly until this occurs.
 
@@ -33,15 +33,15 @@ Homebrew can not install properly until this occurs.
 ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor```
 
-#### Install Homebrew extension Cask
+##### Install Homebrew extension Cask
 
 ```brew install caskroom/cask/brew-cask```
 
-#### Install common applications via Homebrew
+##### Install common applications via Homebrew
 
 ```brew install openssl wget```
 
-#### Install applications via Homebrew Cask
+##### Install applications via Homebrew Cask
 
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
@@ -59,7 +59,6 @@ brew cask install flux
 brew cask install iterm2
 brew cask install owasp-zap
 brew cask install sequel-pro
-brew cask install
 ```
 
 
@@ -76,8 +75,7 @@ brew cask install
 - Setup [VV Blueprints](https://github.com/bradp/vv#blueprints)
 - Install @topdown's VVV dashboard
 ```cd ~/vagrant-local/www/default
-git clone https://github.com/topdown/VVV-Dashboard.git dashboard
-```
+git clone https://github.com/topdown/VVV-Dashboard.git dashboard```
 - Copy dashboard-custom.php to `vagrant-local/www/default/dashboard-custom.php`
 
 
@@ -95,28 +93,16 @@ git clone https://github.com/topdown/VVV-Dashboard.git dashboard
 - Xcode and git are installed, right?
 - If so, running `xcode-select --installe` will get you the prompts for the Xcode Command Line Tools
 - Set some defaults up.
-```
-git config --global user.name "David Laietta"
-git config --global user.email "davidjlaietta@gmail.com"
-```
+```git config --global user.name "David Laietta"
+git config --global user.email "davidjlaietta@gmail.com"```
 - Check that keychain helper is installed with `git credential-osxkeychain`
 -- If not installed, set that sucker up.
-```
-# Download the keychain helper
-$ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-
-# Modify permissions on the helper so it can operate
-$ chmod u+x git-credential-osxkeychain
-
-# Move the helper so Git can access it. This command will ask you for your (computer user) password. As you're typing your password, it won't show the characters, press return when done typing it.
-$ sudo mv git-credential-osxkeychain /usr/local/git/bin
-
-# Tells Git to use the helper
-$ git config --global credential.helper osxkeychain
-
-# Check again to see if the helper is successfully installed
-$ git credential-osxkeychain
-```
+```curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain```
+- Modify permissions on the helper so it can operate
+`chmod u+x git-credential-osxkeychain`
+- Move the helper so Git can access it. This command will ask you for your (computer user) password. As you're typing your password, it won't show the characters, press return when done typing it. `sudo mv git-credential-osxkeychain /usr/local/git/bin`
+- Tells Git to use the helper `git config --global credential.helper osxkeychain`
+- Check again to see if the helper is successfully installed `git credential-osxkeychain`
 - Create a new SSH key for Github
 ```cd ~/.ssh
 ssh-keygen -t rsa -b 8192 -C "davidjlaietta@gmail.com"```
