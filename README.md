@@ -28,7 +28,7 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 Homebrew can not install properly until this occurs.
 
-#### Install Homebrew
+##### Install Homebrew
 
 ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor```
