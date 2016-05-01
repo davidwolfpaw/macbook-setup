@@ -47,7 +47,7 @@ brew install lastpass-cli --with-pinentry --with-doc```
 
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
-``` 
+```
 brew cask install chrome
 brew cask install firefox
 brew cask install dropbox
@@ -79,6 +79,14 @@ brew cask install sequel-pro
 ```cd ~/vagrant-local/www/default
 git clone https://github.com/topdown/VVV-Dashboard.git dashboard```
 - Copy dashboard-custom.php to `vagrant-local/www/default/dashboard-custom.php`
+- Setup a command in sudoers to skip the password for `vagrant up, vagrant halt, vagrant reload` by using the command `sudo visudo` then entering the following at the end of the file, and exiting vi by typing esc, then `:wq`
+```# Allow passwordless startup of Vagrant when using NFS and vagrant-hostsupdater plugin
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+Cmnd_Alias VAGRANT_HOSTSUPDATER_ADD = /bin/sh -c echo "*" >> /etc/hosts
+Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE```
 
 
 ### Set Up Applications
@@ -147,7 +155,7 @@ First thing is to enable the paid Powerpack. The license is in the email account
 - [Alfred Drive Workflow](http://www.packal.org/workflow/google-drive) - Search Google Drive with "d"
 
 
-## System Settings 
+## System Settings
 
 These are things that are a bit specific to my setup, but I find that they end up making my general computing experience that much nicer.
 
