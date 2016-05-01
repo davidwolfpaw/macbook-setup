@@ -1,6 +1,6 @@
-# David's Mac OS X 10.11 El Captin Update Guide
+# David's Mac OS X 10.11 El Capitan Update Guide
 
-Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on.
+Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
 If there are steps that you've noticed that I'm clearly missing, please let me know. If you want to fork this guide to make your own, go right ahead!
 
@@ -39,7 +39,9 @@ brew doctor```
 
 ##### Install common applications via Homebrew
 
-```brew install openssl wget```
+```brew install openssl
+brew install wget
+brew install lastpass-cli --with-pinentry --with-doc```
 
 ##### Install applications via Homebrew Cask
 
@@ -70,7 +72,7 @@ brew cask install sequel-pro
 - Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`
 - Move to vagrant-local `cd vagrant-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
--- Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
+- Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
 - Install Variable VVV ` brew install bradp/vv/vv`
 - Setup [VV Blueprints](https://github.com/bradp/vv#blueprints)
 - Install @topdown's VVV dashboard
@@ -83,20 +85,30 @@ git clone https://github.com/topdown/VVV-Dashboard.git dashboard```
 
 - Login to Chrome to download and setup extensions
 - Setup all Airmail accounts and settings
-- License Sublime Text and Sublime-FTP (license and instructions in email)
 - Login to Dropbox and get files
 - Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 
 
+### Sublime Text 3
+- License Sublime Text and SFTP (license and instructions in email)
+- Sublime Text CLI `mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
+- Install Package Control `import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)`
+- Install Packages: Accessibility, ACF Snippets, BracketHighlighter, CSS Completions, Diffy, Genesis, Gist, JSLint, JSONLint, SFTP, Trailing Spaces, WordPress Developer Resources, WordPress Developer Assistant
+
+
 ### Gitting on with Git
 - Xcode and git are installed, right?
-- If so, running `xcode-select --installe` will get you the prompts for the Xcode Command Line Tools
+- If so, running `xcode-select --install` will get you the prompts for the Xcode Command Line Tools
 - Set some defaults up.
 ```git config --global user.name "David Laietta"
-git config --global user.email "davidjlaietta@gmail.com"```
+git config --global user.email "davidjlaietta@gmail.com"
+git config --global github.user davidlaietta
+git config --global color.ui true
+git config --global push.default current
+git config --global core.editor "subl -w"```
 - Check that keychain helper is installed with `git credential-osxkeychain`
--- If not installed, set that sucker up.
+- If not installed, set that sucker up.
 ```curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain```
 - Modify permissions on the helper so it can operate
 `chmod u+x git-credential-osxkeychain`
@@ -112,6 +124,28 @@ ssh-keygen -t rsa -b 8192 -C "davidjlaietta@gmail.com"```
 - Login to Github
 - [Add SSH key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 - Confirm that you're good to go `ssh -T git@github.com`
+
+
+### Alfred 2
+
+I use [Alfred 2](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers.
+
+First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
+
+- [Route to contact or location]
+(http://www.packal.org/workflow/route-contact-or-location) - type "route" and a name or address, get a Google Map from my current location
+- Install Capture::Tiny to make the Lastpass CLI work `sudo cpan install Capture::Tiny`
+- [Lastpass CLI Workflow](http://www.packal.org/workflow/lastpass-cli-workflow-alfred) - Quickly search Lastpass
+- Set Lastpass email in Alfred settings with `lpsetemail davidjlaietta@gmail.com`
+- [Transmit](http://www.packal.org/workflow/transmit) - search and open favorites in Transmit 4 using the keyword "default ftp"
+- [Launch URL in 3 browsers](http://www.packal.org/workflow/launch-url-3-browsers) - use "test" and a URL to open that site in Firefox, Chrome, and Safari
+- [Network Tools](http://www.packal.org/workflow/network-tools) - make stuff like pings and cache flush fast
+- [Wi-Fi Restart](http://www.packal.org/workflow/wi-fi-restart) - I hate needing this, but my computer just doesn't like staying connected. What am I doing wrong, computer!
+- [Giphy](http://www.packal.org/workflow/giphy) - Use the command "giphy" to find the perfect gif
+- [gitignore](http://www.packal.org/workflow/gitignore-0) - Create common .gitignore file templates. Use `gitignore-update` on first run to download templates
+- [PHP Doc Search](http://www.packal.org/workflow/php-doc-search) - use "phpdoc" to search php.net
+- [Alfred Drive Workflow](http://www.packal.org/workflow/google-drive) - Search Google Drive with "d"
+
 
 ## System Settings 
 
