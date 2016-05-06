@@ -41,7 +41,8 @@ brew doctor```
 
 ```brew install openssl
 brew install wget
-brew install lastpass-cli --with-pinentry --with-doc```
+brew install lastpass-cli --with-pinentry --with-doc
+brew install node```
 
 ##### Install applications via Homebrew Cask
 
@@ -75,6 +76,7 @@ brew cask install sequel-pro
 - Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
 - Install Variable VVV ` brew install bradp/vv/vv`
 - Setup [VV Blueprints](https://github.com/bradp/vv#blueprints)
+- Turn on [xDebug](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Code-Debugging#turning-on-xdebug) with `vagrant ssh` then `xdebug_on`
 - Install @topdown's VVV dashboard
 
 ```cd ~/vagrant-local/www/default
@@ -90,6 +92,8 @@ Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 Cmnd_Alias VAGRANT_HOSTSUPDATER_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE```
+
+- Install VVV Provision Flipper by copying [flip](https://raw.githubusercontent.com/bradp/vvv-provision-flipper/master/flip) into one of your $PATH folders and running `chmod +x flip` if necessary. Then set a default of the quick setup with `flip set quick`
 
 
 ### Set Up Applications
@@ -156,6 +160,9 @@ First thing is to enable the paid Powerpack. The license is in the email account
 - [gitignore](http://www.packal.org/workflow/gitignore-0) - Create common .gitignore file templates. Use `gitignore-update` on first run to download templates
 - [PHP Doc Search](http://www.packal.org/workflow/php-doc-search) - use "phpdoc" to search php.net
 - [Alfred Drive Workflow](http://www.packal.org/workflow/google-drive) - Search Google Drive with "d"
+- [OS X Toolbox](http://sayzlim.net/os-x-toolbox-workflow-alfred-2/) - tools to relaunch finder and dock, purge inactive memory, toggle desktop, toggle system files, and rebuild launch services.
+- [Secure Password Generator](http://www.packal.org/workflow/secure-password-generator) - Make some secure passwords to copy to clipboard easily
+- [Emoji Codes](https://github.com/carlosgaldino/alfred-emoji-workflow) - I can't not use emoji now, join the crowd
 
 
 ## System Settings
@@ -179,6 +186,7 @@ These are things that are a bit specific to my setup, but I find that they end u
 - Show battery percentage in menu bar
 - Show date and time but not day in menu bar
 - Ensure that guest account is off, and main account profile is set
+- Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
 
 
 
