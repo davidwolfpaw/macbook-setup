@@ -42,7 +42,8 @@ brew doctor```
 ```brew install openssl
 brew install wget
 brew install lastpass-cli --with-pinentry --with-doc
-brew install node```
+brew install node
+brew install wrk```
 
 ##### Install applications via Homebrew Cask
 
@@ -122,6 +123,7 @@ git config --global github.user davidlaietta
 git config --global color.ui true
 git config --global push.default current
 git config --global core.editor "subl -w"```
+
 - Check that keychain helper is installed with `git credential-osxkeychain`
 - If not installed, set that sucker up.
 ```curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain```
