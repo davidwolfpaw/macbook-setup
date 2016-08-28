@@ -71,6 +71,7 @@ brew cask install sequel-pro
 - Ensure that Virtual Box and Vagrant are installed
 - Install vagrant-hostupdater `vagrant plugin install vagrant-hostsupdater`
 - Install vagrant-triggers `vagrant plugin install vagrant-triggers`
+- Install vagrant-vbguest `vagrant plugin install vagrant-vbguest`
 - Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`
 - Move to vagrant-local `cd vagrant-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
