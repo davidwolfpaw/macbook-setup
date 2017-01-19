@@ -39,11 +39,14 @@ brew doctor```
 
 ##### Install common applications via Homebrew
 
-```brew install openssl
+```
+brew install openssl
 brew install wget
 brew install lastpass-cli --with-pinentry --with-doc
 brew install node
-brew install wrk```
+brew install wrk
+brew install vassh
+```
 
 ##### Install applications via Homebrew Cask
 
