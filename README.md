@@ -1,4 +1,4 @@
-# David's Mac OS X 10.11 El Capitan Update Guide
+# David's Mac OS X 10.12 MacOS Sierra Setup Guide
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
