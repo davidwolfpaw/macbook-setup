@@ -28,6 +28,8 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 Homebrew can not install properly until this occurs.
 
+```xcode-select --install```
+
 ##### Install Homebrew
 
 ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -66,6 +68,15 @@ brew cask install flux
 brew cask install iterm2
 brew cask install owasp-zap
 brew cask install sequel-pro
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install webpquicklook
+brew cask install suspicious-package
 ```
 
 
