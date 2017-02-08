@@ -11,8 +11,6 @@ If there are steps that you've noticed that I'm clearly missing, please let me k
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
 
 ### Install from App Store
-- [Airmail](https://itunes.apple.com/us/app/airmail-2.6/id918858936?mt=12)
-- [Xcode](https://developer.apple.com/xcode/download/)
 - [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
 - [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
@@ -42,6 +40,7 @@ brew doctor```
 ##### Install common applications via Homebrew
 
 ```
+brew install git
 brew install openssl
 brew install wget
 brew install lastpass-cli --with-pinentry --with-doc
@@ -55,12 +54,15 @@ brew install vassh
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
+brew cask install airmail
 brew cask install chrome
 brew cask install firefox
+brew cask install sublime-text
 brew cask install dropbox
 brew cask install evernote
 brew cask install rescuetime
 brew cask install skype
+brew cask install vlc
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install slack
@@ -138,6 +140,57 @@ git config --global github.user davidlaietta
 git config --global color.ui true
 git config --global push.default current
 git config --global core.editor "subl -w"```
+
+- I'm creating a git ignore based entirely on a suggestion from Carl Alexander's [Mac Setup Post](https://carlalexander.ca/2016-macbook-pro-setup/)
+```vi ~/.gitignore_global```
+
+The file consists of a wide variety of system files and packages that I never want to save to a git repo.
+```# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+ 
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+ 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+ 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+ 
+# IDE files #
+#############
+/.idea
+*.sublime-project
+*.sublime-workspace```
+
+I then save that file and add it to global exclude those files:
+``` git config --global core.excludesfile ~/.gitignore_global```
 
 - Check that keychain helper is installed with `git credential-osxkeychain`
 - If not installed, set that sucker up.
