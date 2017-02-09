@@ -17,7 +17,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 
 ### Install from the Web
-- [Sublime Text 3](http://www.sublimetext.com/3)
 - [NordVPN](https://nordvpn.com/profile/)
 - [Aerial Screensaver](https://github.com/JohnCoates/Aerial/releases/download/v1.1/Aerial.zip)
 
@@ -59,6 +58,7 @@ brew cask install chrome
 brew cask install firefox
 brew cask install sublime-text
 brew cask install dropbox
+brew cask install flux
 brew cask install evernote
 brew cask install rescuetime
 brew cask install skype
@@ -128,6 +128,8 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Sublime Text CLI `mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
 - Install Package Control `import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)`
 - Install Packages: Accessibility, ACF Snippets, BracketHighlighter, CSS Completions, Diffy, Genesis, Gist, JSLint, JSONLint, SFTP, Trailing Spaces, WordPress Developer Resources, WordPress Developer Assistant
+- Symlink so I can open files in Sublime from the command line
+```ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl```
 
 
 ### Gitting on with Git
@@ -153,7 +155,7 @@ The file consists of a wide variety of system files and packages that I never wa
 *.exe
 *.o
 *.so
- 
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -166,13 +168,13 @@ The file consists of a wide variety of system files and packages that I never wa
 *.rar
 *.tar
 *.zip
- 
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
- 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -182,7 +184,7 @@ The file consists of a wide variety of system files and packages that I never wa
 .Trashes
 ehthumbs.db
 Thumbs.db
- 
+
 # IDE files #
 #############
 /.idea
