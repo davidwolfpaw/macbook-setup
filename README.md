@@ -112,8 +112,6 @@ cd ~/vagrant-local/www/default
 git clone https://github.com/topdown/VVV-Dashboard.git dashboard
 cp dashboard/dashboard-custom.php .
 ```
-
-- Copy dashboard-custom.php from `vagrant-local/www/default/dashboard/dashboard-custom.php` to `vagrant-local/www/default/dashboard-custom.php`
 - Setup a command in sudoers to skip the password for `vagrant up, vagrant halt, vagrant reload` by using the command `sudo visudo` then entering the following at the end of the file, and exiting vi by typing esc, then `:wq`
 
 ```
