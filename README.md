@@ -110,6 +110,7 @@ brew cask install cleanmymac
 ```
 cd ~/vagrant-local/www/default
 git clone https://github.com/topdown/VVV-Dashboard.git dashboard
+cp dashboard/dashboard-custom.php .
 ```
 
 - Copy dashboard-custom.php from `vagrant-local/www/default/dashboard/dashboard-custom.php` to `vagrant-local/www/default/dashboard-custom.php`
