@@ -15,6 +15,10 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
+- [Extractor](https://itunes.apple.com/us/app/extractor-unarchive-rar-zip-tar-7z-bzip2-files/id971826370?mt=12)
+- [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
+- [CleanMyDrive 2](https://itunes.apple.com/us/app/cleanmydrive-2-manage-and-clean-external-drives/id523620159?mt=12)
+- [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
 
 ### Install from the Web
 - [NordVPN](https://nordvpn.com/profile/)
@@ -25,7 +29,10 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 Homebrew can not install properly until this occurs.
 
-`xcode-select --install`
+```
+xcode-select --install
+sudo xcodebuild -license accept
+```
 
 ##### Install Homebrew
 
@@ -39,6 +46,7 @@ brew doctor`
 ##### Install common applications via Homebrew
 
 ```
+brew install brew-cask-completion
 brew install git
 brew install openssl
 brew install wget
@@ -54,6 +62,7 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 
 ```
 brew cask install airmail
+brew cask install alfred
 brew cask install chrome
 brew cask install firefox
 brew cask install sublime-text
@@ -79,6 +88,8 @@ brew cask install quicklook-csv
 brew cask install betterzipql
 brew cask install webpquicklook
 brew cask install suspicious-package
+brew cask install keyboardcleantool
+brew cask install cleanmymac
 ```
 
 
