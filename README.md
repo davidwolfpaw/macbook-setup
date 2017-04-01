@@ -25,16 +25,16 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 Homebrew can not install properly until this occurs.
 
-```xcode-select --install```
+`xcode-select --install`
 
 ##### Install Homebrew
 
-```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor```
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor`
 
 ##### Install Homebrew extension Cask
 
-```brew install caskroom/cask/brew-cask```
+`brew install caskroom/cask/brew-cask`
 
 ##### Install common applications via Homebrew
 
@@ -97,19 +97,23 @@ brew cask install suspicious-package
 - Turn on [xDebug](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Code-Debugging#turning-on-xdebug) with `vagrant ssh` then `xdebug_on`
 - Install @topdown's VVV dashboard
 
-```cd ~/vagrant-local/www/default
-git clone https://github.com/topdown/VVV-Dashboard.git dashboard```
+```
+cd ~/vagrant-local/www/default
+git clone https://github.com/topdown/VVV-Dashboard.git dashboard
+```
 
 - Copy dashboard-custom.php from `vagrant-local/www/default/dashboard/dashboard-custom.php` to `vagrant-local/www/default/dashboard-custom.php`
 - Setup a command in sudoers to skip the password for `vagrant up, vagrant halt, vagrant reload` by using the command `sudo visudo` then entering the following at the end of the file, and exiting vi by typing esc, then `:wq`
 
-```# Allow passwordless startup of Vagrant when using NFS and vagrant-hostsupdater plugin
+```
+# Allow passwordless startup of Vagrant when using NFS and vagrant-hostsupdater plugin
 Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
 Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
 Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 Cmnd_Alias VAGRANT_HOSTSUPDATER_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
-%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE```
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE
+```
 
 - Install VVV Provision Flipper by copying [flip](https://raw.githubusercontent.com/bradp/vvv-provision-flipper/master/flip) into one of your $PATH folders and running `chmod +x flip` if necessary. Then set a default of the quick setup with `flip set quick`
 
@@ -129,25 +133,28 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Install Package Control `import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)`
 - Install Packages: Accessibility, ACF Snippets, BracketHighlighter, CSS Completions, Diffy, Genesis, Gist, JSLint, JSONLint, SFTP, Trailing Spaces, WordPress Developer Resources, WordPress Developer Assistant
 - Symlink so I can open files in Sublime from the command line
-```ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl```
+`ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
 
 
 ### Gitting on with Git
 - Xcode and git are installed, right?
 - If so, running `xcode-select --install` will get you the prompts for the Xcode Command Line Tools
 - Set some defaults up.
-```git config --global user.name "David Laietta"
+```
+git config --global user.name "David Laietta"
 git config --global user.email "davidjlaietta@gmail.com"
 git config --global github.user davidlaietta
 git config --global color.ui true
 git config --global push.default current
-git config --global core.editor "subl -w"```
+git config --global core.editor "subl -w"
+```
 
 - I'm creating a git ignore based entirely on a suggestion from Carl Alexander's [Mac Setup Post](https://carlalexander.ca/2016-macbook-pro-setup/)
-```vi ~/.gitignore_global```
+`vi ~/.gitignore_global`
 
 The file consists of a wide variety of system files and packages that I never want to save to a git repo.
-```# compiled source #
+```
+# compiled source #
 ###################
 *.com
 *.class
@@ -189,41 +196,50 @@ Thumbs.db
 #############
 /.idea
 *.sublime-project
-*.sublime-workspace```
+*.sublime-workspace
+```
 
 I then save that file and add it to global exclude those files:
-``` git config --global core.excludesfile ~/.gitignore_global```
+`git config --global core.excludesfile ~/.gitignore_global`
 
 - Check that keychain helper is installed with `git credential-osxkeychain`
 - If not installed, set that sucker up.
-```curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain```
+`curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
 - Modify permissions on the helper so it can operate
 `chmod u+x git-credential-osxkeychain`
 - Move the helper so Git can access it. This command will ask you for your (computer user) password. As you're typing your password, it won't show the characters, press return when done typing it. `sudo mv git-credential-osxkeychain /usr/local/git/bin`
 - Tells Git to use the helper `git config --global credential.helper osxkeychain`
 - Check again to see if the helper is successfully installed `git credential-osxkeychain`
 - Create a new SSH key for Github
-```cd ~/.ssh
-ssh-keygen -t rsa -b 8192 -C "davidjlaietta@gmail.com"```
-- Confirm that ssh-agent is enabled `eval "$(ssh-agent -s)"`
-- Add SSH key to ssh-agent `ssh-add ~/.ssh/id_rsa`
-- Copy SSH key to clipboard `pbcopy < ~/.ssh/id_rsa.pub`
+```
+cd ~/.ssh
+ssh-keygen -t rsa -b 8192 -C "davidjlaietta@gmail.com"
+```
+- Confirm that ssh-agent is enabled
+`eval "$(ssh-agent -s)"`
+- Add SSH key to ssh-agent
+`ssh-add ~/.ssh/id_rsa`
+- Copy SSH key to clipboard
+`pbcopy < ~/.ssh/id_rsa.pub`
 - Login to Github
 - [Add SSH key to Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-- Confirm that you're good to go `ssh -T git@github.com`
+- Confirm that you're good to go
+`ssh -T git@github.com`
 
 
-### Alfred 2
+### Alfred 3
 
-I use [Alfred 2](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers.
+I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers.
 
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
 - [Route to contact or location]
 (http://www.packal.org/workflow/route-contact-or-location) - type "route" and a name or address, get a Google Map from my current location
-- Install Capture::Tiny to make the Lastpass CLI work `sudo cpan install Capture::Tiny`
+- Install Capture::Tiny to make the Lastpass CLI work
+`sudo cpan install Capture::Tiny`
 - [Lastpass CLI Workflow](http://www.packal.org/workflow/lastpass-cli-workflow-alfred) - Quickly search Lastpass
-- Set Lastpass email in Alfred settings with `lpsetemail davidjlaietta@gmail.com`
+- Set Lastpass email in Alfred settings with
+`lpsetemail davidjlaietta@gmail.com`
 - [Transmit](http://www.packal.org/workflow/transmit) - search and open favorites in Transmit 4 using the keyword "default ftp"
 - [Launch URL in 3 browsers](http://www.packal.org/workflow/launch-url-3-browsers) - use "test" and a URL to open that site in Firefox, Chrome, and Safari
 - [Network Tools](http://www.packal.org/workflow/network-tools) - make stuff like pings and cache flush fast
