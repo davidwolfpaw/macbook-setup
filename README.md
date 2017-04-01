@@ -138,11 +138,19 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 
 ### Sublime Text 3
 - License Sublime Text and SFTP (license and instructions in email)
-- Sublime Text CLI `mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
-- Install Package Control `import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)`
+- Sublime Text CLI 
+```
+mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+```
+- Install Package Control
+```
+import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
 - Install Packages: Accessibility, ACF Snippets, BracketHighlighter, CSS Completions, Diffy, Genesis, Gist, JSLint, JSONLint, SFTP, Trailing Spaces, WordPress Developer Resources, WordPress Developer Assistant
 - Symlink so I can open files in Sublime from the command line
-`ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
+```
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
 
 
 ### Gitting on with Git
@@ -158,8 +166,7 @@ git config --global push.default current
 git config --global core.editor "subl -w"
 ```
 
-- I'm creating a git ignore based entirely on a suggestion from Carl Alexander's [Mac Setup Post](https://carlalexander.ca/2016-macbook-pro-setup/)
-`vi ~/.gitignore_global`
+- I'm creating a git ignore based entirely on a suggestion from Carl Alexander's [Mac Setup Post](https://carlalexander.ca/2016-macbook-pro-setup/) `vi ~/.gitignore_global`
 
 The file consists of a wide variety of system files and packages that I never want to save to a git repo.
 ```
