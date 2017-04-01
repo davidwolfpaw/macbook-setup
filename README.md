@@ -62,12 +62,12 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 
 ```
 brew cask install airmail
-brew cask install alfred
+brew cask install flux
 brew cask install chrome
+brew cask install alfred
 brew cask install firefox
 brew cask install sublime-text
 brew cask install dropbox
-brew cask install flux
 brew cask install evernote
 brew cask install rescuetime
 brew cask install skype
@@ -75,7 +75,6 @@ brew cask install vlc
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install slack
-brew cask install flux
 brew cask install iterm2
 brew cask install owasp-zap
 brew cask install sequel-pro
