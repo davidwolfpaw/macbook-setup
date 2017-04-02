@@ -223,13 +223,13 @@ Thumbs.db
 I then save that file and add it to global exclude those files:
 `git config --global core.excludesfile ~/.gitignore_global`
 
-- Check that keychain helper is installed with `git credential-osxkeychain`
+- Check that keychain helper is installed with `git credential-osxkeychain` **Note:** if you installed git via HomeBrew, this is done for you. Skip to the `git config` step below.
 - If not installed, set that sucker up.
 `curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain`
 - Modify permissions on the helper so it can operate
 `chmod u+x git-credential-osxkeychain`
 - Move the helper so Git can access it. This command will ask you for your (computer user) password. As you're typing your password, it won't show the characters, press return when done typing it. `sudo mv git-credential-osxkeychain /usr/local/git/bin`
-- Tells Git to use the helper `git config --global credential.helper osxkeychain`
+- Tell git to use the helper `git config --global credential.helper osxkeychain`
 - Check again to see if the helper is successfully installed `git credential-osxkeychain`
 - Create a new SSH key for Github
 ```
