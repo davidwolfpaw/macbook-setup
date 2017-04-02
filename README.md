@@ -135,6 +135,10 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 - Make iTerm2 look pretty, like with Glacier theme from http://iterm2colorschemes.com/
+- Show hidden files in Finder
+```
+defaults write com.apple.finder AppleShowAllFiles YES
+```
 
 
 ### Sublime Text 3
