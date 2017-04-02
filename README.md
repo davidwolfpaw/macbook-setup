@@ -135,10 +135,6 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 - Make iTerm2 look pretty, like with Glacier theme from http://iterm2colorschemes.com/
-- Show hidden files in Finder
-```
-defaults write com.apple.finder AppleShowAllFiles YES
-```
 
 
 ### Sublime Text 3
@@ -284,7 +280,7 @@ These are things that are a bit specific to my setup, but I find that they end u
 - Make dock nice and tiny
 - Set time format to 24-hour time
 - Change display energy saver settings
-- Set key repeat to fast and delay untilr epeat to short
+- Set key repeat to fast and delay until repeat to short
 - Turn off keyboard brightness when computer is unused
 - Setup replacement texts (like yall) so it doesn't try autocorrecting my informalities
 - Add Colemak input source
