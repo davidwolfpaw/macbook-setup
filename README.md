@@ -269,6 +269,34 @@ First thing is to enable the paid Powerpack. The license is in the email account
 - [Secure Password Generator](http://www.packal.org/workflow/secure-password-generator) - Make some secure passwords to copy to clipboard easily
 - [Emoji Codes](https://github.com/carlosgaldino/alfred-emoji-workflow) - I can't not use emoji now, join the crowd
 
+I use iTerm2, which needs to be setup as a custom shell integration in Alfred. I use the following, which opens iTerm if not open, and opens a new tab to run your commands if it is already open.
+
+```
+on alfred_script(q)  
+  tell application "System Events"
+    -- some versions might identify as "iTerm2" instead of "iTerm"
+    set isRunning to (exists (processes where name is "iTerm")) or (exists (processes where name is "iTerm2"))
+  end tell
+  
+  tell application "iTerm"
+    activate
+    set hasNoWindows to ((count of windows) is 0)
+    if isRunning and hasNoWindows then
+      create window with default profile
+    end if
+    select first window
+    
+    tell the first window
+      if isRunning and hasNoWindows is false then
+        create tab with default profile
+      end if
+      tell current session to write text q
+    end tell
+  end tell
+
+end alfred_script
+```
+
 
 ## System Settings
 
