@@ -89,6 +89,7 @@ brew cask install webpquicklook
 brew cask install suspicious-package
 brew cask install keyboardcleantool
 brew cask install cleanmymac
+brew cask install spectacle
 ```
 
 
