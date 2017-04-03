@@ -135,6 +135,20 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 - Make iTerm2 look pretty, like with Glacier theme from http://iterm2colorschemes.com/
+- I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.bash_rc` file:
+```
+# Add my scripts folder to the path
+PATH=$PATH:~/Dropbox/scripts
+# Source stuff!
+source ~/.bashrc
+
+for f in ~/Dropbox/scripts/*; do
+	if [[ $file == *.sh ]]
+	then
+		source "$f"
+	fi
+done
+```
 
 
 ### Sublime Text 3
