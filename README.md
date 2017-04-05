@@ -67,6 +67,7 @@ brew cask install chrome
 brew cask install alfred
 brew cask install firefox
 brew cask install sublime-text
+brew cask install transmit
 brew cask install dropbox
 brew cask install evernote
 brew cask install rescuetime
