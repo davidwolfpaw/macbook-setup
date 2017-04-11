@@ -92,6 +92,7 @@ brew cask install keyboardcleantool
 brew cask install cleanmymac
 brew cask install spectacle
 brew cask install calibre
+brew cask install imageoptim
 ```
 
 
