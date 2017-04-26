@@ -340,6 +340,7 @@ These are things that are a bit specific to my setup, but I find that they end u
 - Show date and time but not day in menu bar
 - Ensure that guest account is off, and main account profile is set
 - Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
+- Make notification banners only display for three seconds, because ten is ridiculous. `defaults write com.apple.notificationcenterui bannerTime 3`
 
 
 
