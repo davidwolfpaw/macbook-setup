@@ -61,9 +61,8 @@ brew install vassh
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
-brew cask install airmail
 brew cask install flux
-brew cask install chrome
+brew cask install google-chrome
 brew cask install alfred
 brew cask install firefox
 brew cask install sublime-text
