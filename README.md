@@ -19,6 +19,7 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [CleanMyDrive 2](https://itunes.apple.com/us/app/cleanmydrive-2-manage-and-clean-external-drives/id523620159?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
+- [Tweetbot](https://itunes.apple.com/us/app/tweetbot-for-twitter/id557168941?mt=12)
 
 ### Install from the Web
 - [NordVPN](https://nordvpn.com/profile/)
@@ -54,6 +55,7 @@ brew install lastpass-cli --with-pinentry --with-doc
 brew install node
 brew install wrk
 brew install vassh
+brew install imagemagick
 ```
 
 ##### Install applications via Homebrew Cask
