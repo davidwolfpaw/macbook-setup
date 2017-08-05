@@ -52,10 +52,12 @@ brew install git
 brew install openssl
 brew install wget
 brew install lastpass-cli --with-pinentry --with-doc
-brew install node
 brew install wrk
 brew install vassh
 brew install imagemagick
+brew install node
+
+npm install -g yo
 ```
 
 ##### Install applications via Homebrew Cask
