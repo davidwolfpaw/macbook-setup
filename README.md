@@ -272,6 +272,8 @@ I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I c
 
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
+Next up, activate automatic expansions, which will prompt you to allow access via OSX.
+
 - [Route to contact or location]
 (http://www.packal.org/workflow/route-contact-or-location) - type "route" and a name or address, get a Google Map from my current location
 - Install Capture::Tiny to make the Lastpass CLI work
