@@ -11,13 +11,14 @@ If there are steps that you've noticed that I'm clearly missing, please let me k
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
 
 ### Install from App Store
-- [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
-- [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
-- [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
-- [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
-- [Extractor](https://itunes.apple.com/us/app/extractor-unarchive-rar-zip-tar-7z-bzip2-files/id971826370?mt=12)
+- [Airmail](https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12)
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [CleanMyDrive 2](https://itunes.apple.com/us/app/cleanmydrive-2-manage-and-clean-external-drives/id523620159?mt=12)
+- [Extractor](https://itunes.apple.com/us/app/extractor-unarchive-rar-zip-tar-7z-bzip2-files/id971826370?mt=12)
+- [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
+- [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
+- [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
+- [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
 
 ### Install from the Web
@@ -48,16 +49,14 @@ brew doctor`
 ```
 brew install brew-cask-completion
 brew install git
-brew install openssl
-brew install wget
-brew install lastpass-cli --with-pinentry --with-doc
-brew install wrk
-brew install vassh
 brew install imagemagick
+brew install lastpass-cli --with-pinentry --with-doc
+brew install openssl
 brew install node
 brew install phpunit
-
-npm install -g yo
+brew install vassh
+brew install wget
+brew install wrk
 ```
 
 ##### Install applications via Homebrew Cask
@@ -65,39 +64,43 @@ npm install -g yo
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
+brew cask install alfred
+brew cask install betterzipql
+brew cask install calibre
+brew cask install cleanmymac
+brew cask install dropbox
+brew cask install etcher
+brew cask install evernote
+brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
-brew cask install alfred
-brew cask install firefox
-brew cask install sublime-text
-brew cask install transmit
-brew cask install dropbox
-brew cask install evernote
-brew cask install rescuetime
-brew cask install skype
-brew cask install vlc
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install slack
+brew cask install imageoptim
 brew cask install iterm2
 brew cask install owasp-zap
-brew cask install sequel-pro
 brew cask install qlcolorcode
-brew cask install qlstephen
 brew cask install qlmarkdown
-brew cask install quicklook-json
 brew cask install qlprettypatch
+brew cask install qlstephen
 brew cask install quicklook-csv
-brew cask install betterzipql
-brew cask install webpquicklook
-brew cask install suspicious-package
-brew cask install keyboardcleantool
-brew cask install cleanmymac
+brew cask install quicklook-json
+brew cask install rescuetime
+brew cask install skype
+brew cask install sequel-pro
+brew cask install slack
 brew cask install spectacle
-brew cask install calibre
-brew cask install imageoptim
+brew cask install station
+brew cask install sublime-text
+brew cask install suspicious-package
+brew cask install transmit
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+brew cask install webpquicklook
 ```
-
+#### Additional Command Line Installs
+```
+npm install -g yo
+```
 
 ### Vagrant, VVV, VV
 
