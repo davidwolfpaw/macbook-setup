@@ -53,7 +53,7 @@ brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
 brew install openssl
 brew install node
-brew install phpunit
+brew install homebrew/php/phpunit
 brew install vassh
 brew install wget
 brew install wrk
