@@ -91,6 +91,7 @@ brew cask install spectacle
 brew cask install station
 brew cask install sublime-text
 brew cask install suspicious-package
+brew cask install the-unarchiver
 brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
