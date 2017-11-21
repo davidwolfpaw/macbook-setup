@@ -48,6 +48,7 @@ brew doctor`
 
 ```
 brew install brew-cask-completion
+brew install ghostscript
 brew install git
 brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
