@@ -14,7 +14,7 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [Airmail](https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12)
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [CleanMyDrive 2](https://itunes.apple.com/us/app/cleanmydrive-2-manage-and-clean-external-drives/id523620159?mt=12)
-- [Extractor](https://itunes.apple.com/us/app/extractor-unarchive-rar-zip-tar-7z-bzip2-files/id971826370?mt=12)
+- [The Unarchiver](https://theunarchiver.com/)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 - [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
 - [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
@@ -23,7 +23,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 ### Install from the Web
 - [NordVPN](https://nordvpn.com/profile/)
-- [Aerial Screensaver](https://github.com/JohnCoates/Aerial/releases/download/v1.1/Aerial.zip)
 
 ### Homebrew
 ##### Run Xcode and accept the license
@@ -114,16 +113,7 @@ npm install -g yo
 - Move to vagrant-local `cd vagrant-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
 - Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
-- Install Variable VVV ` brew install bradp/vv/vv`
-- Setup [VV Blueprints](https://github.com/bradp/vv#blueprints)
 - Turn on [xDebug](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Code-Debugging#turning-on-xdebug) with `vagrant ssh` then `xdebug_on`
-- Install @topdown's VVV dashboard
-
-```
-cd ~/vagrant-local/www/default
-git clone https://github.com/topdown/VVV-Dashboard.git dashboard
-cp dashboard/dashboard-custom.php .
-```
 - Setup a command in sudoers to skip the password for `vagrant up, vagrant halt, vagrant reload` by using the command `sudo visudo` then entering the following at the end of the file, and exiting vi by typing esc, then `:wq`
 
 ```
@@ -135,8 +125,6 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_ADD = /bin/sh -c echo "*" >> /etc/hosts
 Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE
 ```
-
-- Install VVV Provision Flipper by copying [flip](https://raw.githubusercontent.com/bradp/vvv-provision-flipper/master/flip) into one of your $PATH folders and running `chmod +x flip` if necessary. Then set a default of the quick setup with `flip set quick`
 
 
 ### Set Up Applications
