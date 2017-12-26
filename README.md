@@ -175,9 +175,9 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 - If so, running `xcode-select --install` will get you the prompts for the Xcode Command Line Tools
 - Set some defaults up.
 ```
-git config --global user.name "David Laietta"
-git config --global user.email "davidjlaietta@gmail.com"
-git config --global github.user davidlaietta
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git config --global github.user githubusername
 git config --global color.ui true
 git config --global push.default current
 git config --global core.editor "subl -w"
@@ -246,7 +246,7 @@ I then save that file and add it to global exclude those files:
 - Create a new SSH key for Github
 ```
 cd ~/.ssh
-ssh-keygen -t rsa -b 8192 -C "davidjlaietta@gmail.com"
+ssh-keygen -t rsa -b 8192 -C "your@email.com"
 ```
 - Confirm that ssh-agent is enabled
 `eval "$(ssh-agent -s)"`
@@ -274,7 +274,7 @@ Next up, activate automatic expansions, which will prompt you to allow access vi
 `sudo cpan install Capture::Tiny`
 - [Lastpass CLI Workflow](http://www.packal.org/workflow/lastpass-cli-workflow-alfred) - Quickly search Lastpass
 - Set Lastpass email in Alfred settings with
-`lpsetemail davidjlaietta@gmail.com`
+`lpsetemail your@email.com`
 - [Transmit](http://www.packal.org/workflow/transmit) - search and open favorites in Transmit 4 using the keyword "default ftp"
 - [Launch URL in 3 browsers](http://www.packal.org/workflow/launch-url-3-browsers) - use "test" and a URL to open that site in Firefox, Chrome, and Safari
 - [Network Tools](http://www.packal.org/workflow/network-tools) - make stuff like pings and cache flush fast
