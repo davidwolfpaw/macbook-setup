@@ -47,12 +47,15 @@ brew doctor`
 
 ```
 brew install brew-cask-completion
+brew install composer
 brew install ghostscript
 brew install git
 brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
-brew install openssl
+brew install nmap
 brew install node
+brew install openssl
+brew install php71
 brew install homebrew/php/phpunit
 brew install vassh
 brew install wget
