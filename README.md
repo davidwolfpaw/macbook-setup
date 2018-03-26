@@ -55,7 +55,9 @@ brew install lastpass-cli --with-pinentry --with-doc
 brew install nmap
 brew install node
 brew install openssl
-brew install php71
+brew install php72
+brew install python3
+brew postinstall python3
 brew install homebrew/php/phpunit
 brew install vassh
 brew install wget
