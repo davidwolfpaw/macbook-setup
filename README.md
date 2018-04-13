@@ -46,6 +46,7 @@ brew doctor`
 ##### Install common applications via Homebrew
 
 ```
+brew install arp-scan
 brew install brew-cask-completion
 brew install composer
 brew install ghostscript
