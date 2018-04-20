@@ -6,6 +6,17 @@ If there are steps that you've noticed that I'm clearly missing, please let me k
 
 
 
+## Before Reformat
+
+I generally am doing this because I'm reformatting an old computer because I have a problem (usually the computer, always me). I sometimes forget that there are more than files to backup, since not everything syncs perfectly. Here's what I need to remember to sync and where they live.
+
+- Transmit Favorites - Must be manually synced for me using their export tool
+- Sublime Text Preferences - PackageSync creates a zip for me
+- iTerm2 - Syncing preferences to Dropbox
+- Chrome - OneTab should be bookmarked, and the rest Chrome syncs
+- Calibre - Export library to folder
+
+
 ## Install Basic Software
 
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
@@ -169,7 +180,7 @@ mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/b
 ```
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
-- Install Packages: Accessibility, ACF Snippets, Boxy Theme, BracketHighlighter, CSS Completions, Diffy, Emmet, Genesis, Gist, HyperlinkHelper, JSLint, JSONLint, ReadmePlease, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-phpcs, Trailing Spaces, WordPress Completions, WordPress Customizer, WordPress Developer Assistant
+- Install Packages: Accessibility, ACF Snippets, Boxy Theme, BracketHighlighter, CSS Completions, Diffy, Emmet, Genesis, Gist, HyperlinkHelper, JSLint, JSONLint, PackageSync, ReadmePlease, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-phpcs, Trailing Spaces, WordPress Completions, WordPress Customizer, WordPress Developer Assistant
 - Symlink so I can open files in Sublime from the command line
 ```
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
