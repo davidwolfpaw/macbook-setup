@@ -343,7 +343,7 @@ These are things that are a bit specific to my setup, but I find that they end u
 - Add Colemak input source
 - Set trackpad click to light, tracking speed to rather fast, and silent clicking
 - Turn off launchpad trackpad gesture
-- Setup internet accounts (email, Twitter, Facebook)
+- Setup internet accounts (email, Twitter)
 - Show bluetooth in menu bar
 - Show battery percentage in menu bar
 - Show date and time but not day in menu bar
