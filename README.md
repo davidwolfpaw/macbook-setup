@@ -22,18 +22,14 @@ I generally am doing this because I'm reformatting an old computer because I hav
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
 
 ### Install from App Store
-- [Airmail](https://itunes.apple.com/us/app/airmail-3/id918858936?mt=12)
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
-- [CleanMyDrive 2](https://itunes.apple.com/us/app/cleanmydrive-2-manage-and-clean-external-drives/id523620159?mt=12)
 - [The Unarchiver](https://theunarchiver.com/)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 - [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
 - [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
+- [NordVPN](https://itunes.apple.com/us/app/vpn-by-nordvpn-web-security/id1116599239?mt=12)
 - [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
-
-### Install from the Web
-- [NordVPN](https://nordvpn.com/profile/)
 
 ### Homebrew
 ##### Run Xcode and accept the license
@@ -83,13 +79,13 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 ```
 brew cask install alfred
 brew cask install betterzipql
+brew cask install boostnote
 brew cask install calibre
 brew cask install cleanmymac
 brew cask install dropbox
 brew cask install etcher
 brew cask install evernote
 brew cask install firefox
-brew cask install flux
 brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
@@ -99,13 +95,11 @@ brew cask install qlmarkdown
 brew cask install qlprettypatch
 brew cask install qlstephen
 brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install rescuetime
+brew cask install quicklook-jso
 brew cask install skype
 brew cask install sequel-pro
 brew cask install slack
 brew cask install spectacle
-brew cask install station
 brew cask install sublime-text
 brew cask install suspicious-package
 brew cask install the-unarchiver
@@ -147,13 +141,13 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 ### Set Up Applications
 
 - Login to Chrome to download and setup extensions
-- Setup all Airmail accounts and settings
 - Login to Dropbox and get files
 - Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 - Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
 - Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
 - Make iTerm2 look pretty, like with Glacier theme from http://iterm2colorschemes.com/
+- Alternatively, load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
 - I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.bash_rc` file:
 ```
 # Add my scripts folder to the path
