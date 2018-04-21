@@ -95,9 +95,10 @@ brew cask install qlmarkdown
 brew cask install qlprettypatch
 brew cask install qlstephen
 brew cask install quicklook-csv
-brew cask install quicklook-jso
-brew cask install skype
+brew cask install quicklook-json
 brew cask install sequel-pro
+brew cask install signal
+brew cask install skype
 brew cask install slack
 brew cask install spectacle
 brew cask install sublime-text
