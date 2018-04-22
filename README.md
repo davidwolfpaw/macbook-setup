@@ -67,6 +67,7 @@ brew install php72
 brew install python3
 brew postinstall python3
 brew install homebrew/php/phpunit
+brew install thefuck
 brew install vassh
 brew install wget
 brew install wrk
@@ -109,6 +110,7 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
+brew tap caskroom/fonts && brew cask install font-source-code-pro
 ```
 #### Additional Command Line Installs
 ```
@@ -147,9 +149,9 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Login to all active Slack teams
 - Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
 - Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
-- Make iTerm2 look pretty, like with Glacier theme from http://iterm2colorschemes.com/
-- Alternatively, load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
-- I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.bash_rc` file:
+- Load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
+- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
+- I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.zshrc` file:
 ```
 # Add my scripts folder to the path
 PATH=$PATH:~/Dropbox/scripts
