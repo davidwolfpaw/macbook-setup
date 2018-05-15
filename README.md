@@ -23,7 +23,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 ### Install from App Store
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
-- [The Unarchiver](https://theunarchiver.com/)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 - [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
 - [Noizio](https://itunes.apple.com/us/app/noizio/id928871589?mt=12)
@@ -54,23 +53,32 @@ brew doctor`
 
 ```
 brew install arp-scan
+brew install asciidoc
 brew install brew-cask-completion
+brew install cmake
 brew install composer
+brew install docbook-xsl
 brew install ghostscript
 brew install git
+brew install highlight
 brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
 brew install nmap
 brew install node
 brew install openssl
 brew install php72
+brew install php-cs-fixer
+brew install phplint
+brew install homebrew/php/phpunit
+brew install pkg-config
 brew install python3
 brew postinstall python3
-brew install homebrew/php/phpunit
 brew install thefuck
 brew install vassh
+brew install vim
 brew install wget
 brew install wrk
+brew install zsh-syntax-highlighting
 ```
 
 ##### Install applications via Homebrew Cask
@@ -79,7 +87,7 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 
 ```
 brew cask install alfred
-brew cask install betterzipql
+brew cask install arduino
 brew cask install boostnote
 brew cask install calibre
 brew cask install cleanmymac
@@ -90,6 +98,7 @@ brew cask install firefox
 brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
+brew cask install nordvpn
 brew cask install owasp-zap
 brew cask install qlcolorcode
 brew cask install qlmarkdown
@@ -104,13 +113,13 @@ brew cask install slack
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install suspicious-package
-brew cask install the-unarchiver
+brew cask install telegram
 brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
-brew tap caskroom/fonts && brew cask install font-source-code-pro
+brew cask install caskroom/fonts/font-source-code-pro
 ```
 #### Additional Command Line Installs
 ```
