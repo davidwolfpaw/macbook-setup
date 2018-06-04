@@ -126,7 +126,7 @@ brew cask install caskroom/fonts/font-source-code-pro
 npm install -g yo
 ```
 
-### Vagrant, VVV, VV
+### VirtualBox, Vagrant, & VVV
 
 - Ensure that Virtual Box and Vagrant are installed
 - Install vagrant-hostupdater `vagrant plugin install vagrant-hostsupdater`
