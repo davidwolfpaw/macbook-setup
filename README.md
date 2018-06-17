@@ -21,12 +21,13 @@ I generally am doing this because I'm reformatting an old computer because I hav
 
 This is the software that I use on a very regular basis. Not all software is listed, as this would be one of the most time consuming to keep up to date.
 
-### Install from App Store
+### Install from App Store/Web
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 - [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
 - [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
+- [VS Code](https://code.visualstudio.com/download)
 
 ### Homebrew
 ##### Run Xcode and accept the license
@@ -52,6 +53,7 @@ brew doctor`
 ```
 brew install arp-scan
 brew install asciidoc
+brew install awscli
 brew install brew-cask-completion
 brew install cmake
 brew install composer
@@ -59,8 +61,10 @@ brew install docbook-xsl
 brew install ghostscript
 brew install git
 brew install highlight
+brew install html2text
 brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
+brew install markdown
 brew install nmap
 brew install node
 brew install openssl
@@ -106,7 +110,6 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
-brew cask install skype
 brew cask install slack
 brew cask install spectacle
 brew cask install sublime-text
@@ -123,6 +126,7 @@ brew cask install caskroom/fonts/font-source-code-pro
 ```
 npm install -g yo
 npm install -g imageoptim-cli
+npm install -g gulp-cli
 ```
 
 ### VirtualBox, Vagrant, & VVV
