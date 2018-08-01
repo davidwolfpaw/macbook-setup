@@ -66,15 +66,9 @@ brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
 brew install markdown
 brew install nmap
-brew install node
-brew install openssl
-brew install php72
 brew install php-cs-fixer
 brew install phplint
-brew install homebrew/php/phpunit
 brew install pkg-config
-brew install python3
-brew postinstall python3
 brew install thefuck
 brew install vassh
 brew install vim
