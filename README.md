@@ -277,7 +277,7 @@ ssh-keygen -t rsa -b 8192 -C "your@email.com"
 
 ### Alfred 3
 
-I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers.
+I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers. I have all of my preferences saved in Dropbox, but here is an incomplete list of regularly used workflows and settings.
 
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
