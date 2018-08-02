@@ -161,7 +161,7 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 # Add my scripts folder to the path
 PATH=$PATH:~/Dropbox/scripts
 # Source stuff!
-source ~/.bashrc
+source ~/.zshrc
 
 for f in ~/Dropbox/scripts/*; do
 	if [[ $file == *.sh ]]
@@ -174,10 +174,6 @@ done
 
 ### Sublime Text 3
 - License Sublime Text and SFTP (license and instructions in email)
-- Sublime Text CLI 
-```
-mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-```
 - Install Package Control by opening Sublime Text, opening the command prompt with ctrl+`, and entering the following:
 ```
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
