@@ -66,6 +66,7 @@ brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
 brew install markdown
 brew install nmap
+brew install npm
 brew install php-cs-fixer
 brew install phplint
 brew install pkg-config
@@ -74,6 +75,7 @@ brew install vassh
 brew install vim
 brew install wget
 brew install wrk
+brew install zsh
 brew install zsh-syntax-highlighting
 ```
 
@@ -114,6 +116,8 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
+brew cask install caskroom/fonts/font-roboto
+brew cask install caskroom/fonts/font-roboto-mono
 brew cask install caskroom/fonts/font-source-code-pro
 ```
 #### Additional Command Line Installs
