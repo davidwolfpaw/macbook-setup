@@ -75,7 +75,6 @@ brew install vassh
 brew install vim
 brew install wget
 brew install wrk
-brew install zsh
 brew install zsh-syntax-highlighting
 ```
 
@@ -167,7 +166,7 @@ PATH=$PATH:~/Dropbox/scripts
 # Source stuff!
 source ~/.zshrc
 
-for f in ~/Dropbox/scripts/*; do
+for f in ~/Dropbox/scripts/zsh/*; do
 	if [[ $file == *.sh ]]
 	then
 		source "$f"
