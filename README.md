@@ -49,28 +49,39 @@ brew doctor`
 `brew install caskroom/cask/brew-cask`
 
 ##### Install common applications via Homebrew
+_Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
 
 ```
+brew install ack
+brew install ag
 brew install arp-scan
 brew install asciidoc
 brew install awscli
+brew install bat
 brew install brew-cask-completion
 brew install cmake
 brew install composer
+brew install diff-so-fancy
 brew install docbook-xsl
+brew install fd
 brew install ghostscript
 brew install git
 brew install highlight
 brew install html2text
+brew install htop
 brew install imagemagick
 brew install lastpass-cli --with-pinentry --with-doc
 brew install markdown
+brew install ncdu
 brew install nmap
+brew install noti
 brew install npm
 brew install php-cs-fixer
 brew install phplint
 brew install pkg-config
+brew install prettyping
 brew install thefuck
+brew install tldr
 brew install vassh
 brew install vim
 brew install wget
@@ -90,7 +101,6 @@ brew cask install calibre
 brew cask install cleanmymac
 brew cask install dropbox
 brew cask install etcher
-brew cask install evernote
 brew cask install firefox
 brew cask install google-chrome
 brew cask install imageoptim
@@ -119,12 +129,32 @@ brew cask install caskroom/fonts/font-roboto
 brew cask install caskroom/fonts/font-roboto-mono
 brew cask install caskroom/fonts/font-source-code-pro
 ```
-#### Additional Command Line Installs
+### Additional Command Line Installs
+_A few of these came from this post by Remy Sharp, [CLI: Improved](https://remysharp.com/2018/08/23/cli-improved) which is definitely worth checking out._
+#### NPM Tools
 ```
 npm install -g yo
 npm install -g imageoptim-cli
 npm install -g gulp-cli
 ```
+
+#### Oh My ZSH!
+- Install a fancy zsh framework for funtimes
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
+- Setup changes to the .zshrc file to config for our usage
+
+#### Make some aliases
+```
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias du="ncdu --color dark -rr -x --exclude .git"
+
+```
+
+####
 
 ### VirtualBox, Vagrant, & VVV
 
@@ -158,7 +188,6 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 - Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
 - Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
 - Load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
-- Make zsh the default shell for the current user with `chsh -s $(which zsh)`
 - I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.zshrc` file:
 ```
 # Add my scripts folder to the path
@@ -186,6 +215,10 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 ```
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
+- Setup fzf to open the previewed file in Sublime Text 3 with ctrl+O shortcut
+```
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+```
 
 
 ### Gitting on with Git
@@ -196,9 +229,14 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 git config --global github.user githubusername
-git config --global color.ui true
 git config --global push.default current
 git config --global core.editor "subl -w"
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global color.ui true
+git config --global color.diff-highlight.oldNormal    "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal    "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
 ```
 
 - I'm creating a git ignore based entirely on a suggestion from Carl Alexander's [Mac Setup Post](https://carlalexander.ca/2016-macbook-pro-setup/) `vi ~/.gitignore_global`
