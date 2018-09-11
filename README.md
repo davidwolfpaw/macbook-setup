@@ -46,7 +46,7 @@ brew doctor`
 
 ##### Install Homebrew extension Cask
 
-`brew install caskroom/cask/brew-cask`
+`brew install cask`
 
 ##### Install common applications via Homebrew
 _Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
@@ -64,6 +64,7 @@ brew install composer
 brew install diff-so-fancy
 brew install docbook-xsl
 brew install fd
+brew install fzf
 brew install ghostscript
 brew install git
 brew install highlight
@@ -75,7 +76,7 @@ brew install markdown
 brew install ncdu
 brew install nmap
 brew install noti
-brew install npm
+brew install pandoc
 brew install php-cs-fixer
 brew install phplint
 brew install pkg-config
@@ -85,7 +86,11 @@ brew install tldr
 brew install vassh
 brew install vim
 brew install wget
+brew install wp-cli
+brew install wp-cli-completion
 brew install wrk
+brew install zsh
+brew install zsh-completions
 brew install zsh-syntax-highlighting
 ```
 
