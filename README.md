@@ -216,7 +216,7 @@ done
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
 ```
-- Install Packages: Accessibility, ACF Snippets, Boxy Theme, BracketHighlighter, CSS Completions, Diffy, Emmet, Genesis, Gist, HyperlinkHelper, JSLint, JSONLint, PackageSync, ReadmePlease, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-phpcs, Trailing Spaces, WordPress Completions, WordPress Customizer, WordPress Developer Assistant
+- Install Packages: Accessibility, ACF Snippets, Ayu Theme, BracketHighlighter, CSS Completions, Diffy, EditorConfig, Genesis, Gist,  JSLint, JSONLint, PHPCdoeBeautifier, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-contrib-php-cs-fixer, SublimeLinter-php, SublimeLinter-phpcs, Text Pastry, WordPress Completions, WordPress Customizer
 - Symlink so I can open files in Sublime from the command line
 ```
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
