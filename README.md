@@ -135,12 +135,21 @@ brew cask install caskroom/fonts/font-roboto-mono
 brew cask install caskroom/fonts/font-source-code-pro
 ```
 ### Additional Command Line Installs
-_A few of these came from this post by Remy Sharp, [CLI: Improved](https://remysharp.com/2018/08/23/cli-improved) which is definitely worth checking out._
 #### NPM Tools
 ```
 npm install -g yo
 npm install -g imageoptim-cli
 npm install -g gulp-cli
+npm install -g csslint
+npm install -g prettier
+```
+
+#### Composer Tools
+```
+composer global require squizlabs/php_codesniffer
+composer global require wp-coding-standards/wpcs
+composer global require overtrue/phplint
+composer global require friendsofphp/php-cs-fixer
 ```
 
 #### Oh My ZSH!
@@ -152,6 +161,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 - Setup changes to the .zshrc file to config for our usage
 
 #### Make some aliases
+_A few of these came from this post by Remy Sharp, [CLI: Improved](https://remysharp.com/2018/08/23/cli-improved) which is definitely worth checking out._
 ```
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
