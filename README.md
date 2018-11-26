@@ -53,12 +53,12 @@ _Yes, you can run this all as one `brew install` command followed by the list of
 
 ```
 brew install ack
-brew install ag
 brew install arp-scan
 brew install asciidoc
 brew install awscli
 brew install bat
 brew install brew-cask-completion
+brew install cask
 brew install cmake
 brew install composer
 brew install diff-so-fancy
@@ -67,17 +67,24 @@ brew install fd
 brew install fzf
 brew install ghostscript
 brew install git
+brew install gnupg
+brew install go
 brew install highlight
+brew install hopenpgp-tools
 brew install html2text
 brew install htop
 brew install imagemagick
+brew install imageoptim-cli
 brew install lastpass-cli --with-pinentry --with-doc
+brew install libiconv
+brew install libmagic
+brew install libu2f-host
+brew install libxml2
 brew install markdown
 brew install ncdu
 brew install nmap
 brew install noti
 brew install pandoc
-brew install php-cs-fixer
 brew install phplint
 brew install pkg-config
 brew install prettyping
@@ -85,10 +92,12 @@ brew install thefuck
 brew install tldr
 brew install vassh
 brew install vim
+brew install webtorrent-cli
 brew install wget
 brew install wp-cli
 brew install wp-cli-completion
 brew install wrk
+brew install ykman
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
@@ -99,6 +108,7 @@ brew install zsh-syntax-highlighting
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
+brew cask install adobe-digital-editions
 brew cask install alfred
 brew cask install arduino
 brew cask install boostnote
@@ -107,6 +117,12 @@ brew cask install cleanmymac
 brew cask install dropbox
 brew cask install etcher
 brew cask install firefox
+brew cask install font-hack
+brew cask install font-hack-nerd-font
+brew cask install font-roboto
+brew cask install font-roboto-mono
+brew cask install font-source-code-pro
+brew cask install franz
 brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
@@ -120,8 +136,10 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
+brew cask install simplenote
 brew cask install slack
 brew cask install spectacle
+brew cask install steam
 brew cask install sublime-text
 brew cask install suspicious-package
 brew cask install telegram
@@ -130,9 +148,6 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
-brew cask install caskroom/fonts/font-roboto
-brew cask install caskroom/fonts/font-roboto-mono
-brew cask install caskroom/fonts/font-source-code-pro
 ```
 ### Additional Command Line Installs
 #### NPM Tools
