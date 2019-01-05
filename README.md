@@ -80,6 +80,7 @@ brew install libiconv
 brew install libmagic
 brew install libu2f-host
 brew install libxml2
+brew install mackup
 brew install markdown
 brew install ncdu
 brew install nmap
@@ -152,11 +153,13 @@ brew cask install webpquicklook
 ### Additional Command Line Installs
 #### NPM Tools
 ```
-npm install -g yo
-npm install -g imageoptim-cli
-npm install -g gulp-cli
 npm install -g csslint
+npm install -g gulp-cli
+npm install -g how-2
+npm install -g imageoptim-cli
 npm install -g prettier
+npm install -g undollar
+npm install -g yo
 ```
 
 #### Composer Tools
@@ -178,13 +181,21 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 #### Make some aliases
 _A few of these came from this post by Remy Sharp, [CLI: Improved](https://remysharp.com/2018/08/23/cli-improved) which is definitely worth checking out._
 ```
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias du="ncdu --color dark -rr -x --exclude .git"
-
+alias gits="git status"
+alias gita="git add ."
+alias gitc="git commit -m"
+alias gitpom="git push -u origin master"
 ```
 
-####
+#### Misc Tools
+- [Has](https://github.com/kdabir/has) for checking dependencies and versions
+`git clone https://github.com/kdabir/has.git && cd has && make install`
+
 
 ### VirtualBox, Vagrant, & VVV
 
@@ -406,6 +417,11 @@ end alfred_script
 ## System Settings
 
 These are things that are a bit specific to my setup, but I find that they end up making my general computing experience that much nicer.
+
+### Mackup
+Some of the below and some of the setup from above can be done with [Mackup](https://github.com/lra/mackup/), which can help keep application settings synced. Since I've already installed it before, I can run `mackup restore` to have a lot of my settings synced.
+
+### General Settings
 
 - Turn off all stupid notifications and badges/banners/butchers of concentration
 - Set Chrome as the default browser
