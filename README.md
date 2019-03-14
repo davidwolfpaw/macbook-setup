@@ -15,6 +15,7 @@ I generally am doing this because I'm reformatting an old computer because I hav
 - iTerm2 - Syncing preferences to Dropbox
 - Chrome - OneTab should be bookmarked, and the rest Chrome syncs
 - Calibre - Export library to folder
+- Firefox - Firefox syncs itself
 
 
 ## Install Basic Software
@@ -46,7 +47,8 @@ brew doctor`
 
 ##### Install Homebrew extension Cask
 
-`brew install cask`
+`brew install cask
+brew tap homebrew/cask-fonts`
 
 ##### Install common applications via Homebrew
 _Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
@@ -111,24 +113,19 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 ```
 brew cask install adobe-digital-editions
 brew cask install alfred
-brew cask install arduino
-brew cask install boostnote
 brew cask install calibre
 brew cask install cleanmymac
 brew cask install dropbox
-brew cask install etcher
 brew cask install firefox
 brew cask install font-hack
 brew cask install font-hack-nerd-font
 brew cask install font-roboto
 brew cask install font-roboto-mono
 brew cask install font-source-code-pro
-brew cask install franz
 brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install nordvpn
-brew cask install owasp-zap
 brew cask install qlcolorcode
 brew cask install qlmarkdown
 brew cask install qlprettypatch
@@ -138,18 +135,25 @@ brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
 brew cask install simplenote
-brew cask install slack
 brew cask install spectacle
-brew cask install steam
 brew cask install sublime-text
-brew cask install suspicious-package
-brew cask install telegram
 brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
+
+brew cask install arduino
+brew cask install boostnote
+brew cask install etcher
+brew cask install franz
+brew cask install owasp-zap
+brew cask install slack
+brew cask install steam
+brew cask install suspicious-package
+brew cask install telegram
 ```
+
 ### Additional Command Line Installs
 #### NPM Tools
 ```
