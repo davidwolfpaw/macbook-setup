@@ -10,12 +10,12 @@ If there are steps that you've noticed that I'm clearly missing, please let me k
 
 I generally am doing this because I'm reformatting an old computer because I have a problem (usually the computer, always me). I sometimes forget that there are more than files to backup, since not everything syncs perfectly. Here's what I need to remember to sync and where they live.
 
-- Transmit Favorites - Must be manually synced for me using their export tool
-- Sublime Text Preferences - PackageSync creates a zip for me
-- iTerm2 - Syncing preferences to Dropbox
-- Chrome - OneTab should be bookmarked, and the rest Chrome syncs
-- Calibre - Export library to folder
+- Calibre - Library is saved in user files, backup from computer
+- Chrome - OneTab should be bookmarked, and the rest Chrome syncs itself
 - Firefox - Firefox syncs itself
+- iTerm2 - Syncing preferences to Dropbox
+- Sublime Text Preferences - PackageSync creates a zip for me. Save current workspace as well to Dropbox
+- Transmit Favorites - Must be manually synced for me using their export tool, or use Panic Sync
 
 
 ## Install Basic Software
@@ -25,8 +25,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 ### Install from App Store/Web
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
-- [Keynote](https://itunes.apple.com/us/app/keynote/id409183694?mt=12)
-- [Pages](https://itunes.apple.com/us/app/pages/id409201541?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
 - [VS Code](https://code.visualstudio.com/download)
 
@@ -37,18 +35,21 @@ Homebrew can not install properly until this occurs.
 
 ```
 xcode-select --install
-sudo xcodebuild -license accept
 ```
 
 ##### Install Homebrew
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor`
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+```
 
 ##### Install Homebrew extension Cask
 
-`brew install cask
-brew tap homebrew/cask-fonts`
+```
+brew install cask
+brew tap homebrew/cask-fonts
+```
 
 ##### Install common applications via Homebrew
 _Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
@@ -57,27 +58,20 @@ _Yes, you can run this all as one `brew install` command followed by the list of
 brew install ack
 brew install arp-scan
 brew install asciidoc
-brew install awscli
 brew install bat
 brew install brew-cask-completion
 brew install cask
 brew install cmake
 brew install composer
 brew install diff-so-fancy
-brew install docbook-xsl
 brew install fd
 brew install fzf
 brew install ghostscript
 brew install git
-brew install gnupg
-brew install go
 brew install highlight
-brew install hopenpgp-tools
 brew install html2text
 brew install htop
 brew install imagemagick
-brew install imageoptim-cli
-brew install lastpass-cli --with-pinentry --with-doc
 brew install libiconv
 brew install libmagic
 brew install libu2f-host
@@ -89,21 +83,29 @@ brew install nmap
 brew install noti
 brew install pandoc
 brew install phplint
-brew install pkg-config
 brew install prettyping
-brew install thefuck
-brew install tldr
 brew install vassh
 brew install vim
 brew install webtorrent-cli
 brew install wget
 brew install wp-cli
 brew install wp-cli-completion
-brew install wrk
-brew install ykman
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
+
+brew install awscli
+brew install docbook-xsl
+brew install gnupg
+brew install go
+brew install hopenpgp-tools
+brew install imageoptim-cli
+brew install lastpass-cli --with-pinentry --with-doc
+brew install pkg-config
+brew install thefuck
+brew install tldr
+brew install wrk
+brew install ykman
 ```
 
 ##### Install applications via Homebrew Cask
@@ -134,7 +136,6 @@ brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
-brew cask install simplenote
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install transmit
@@ -144,10 +145,11 @@ brew cask install vlc
 brew cask install webpquicklook
 
 brew cask install arduino
+brew cask install balenaetcher
 brew cask install boostnote
-brew cask install etcher
 brew cask install franz
 brew cask install owasp-zap
+brew cask install simplenote
 brew cask install slack
 brew cask install steam
 brew cask install suspicious-package
@@ -183,6 +185,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 - Setup changes to the .zshrc file to config for our usage
 
 #### Make some aliases
+My current zsh profile with my aliases is backed up with Mackup now, but just in case these are needed
+
 _A few of these came from this post by Remy Sharp, [CLI: Improved](https://remysharp.com/2018/08/23/cli-improved) which is definitely worth checking out._
 ```
 alias zshconfig="mate ~/.zshrc"
@@ -199,13 +203,14 @@ alias gitpom="git push -u origin master"
 #### Misc Tools
 - [Has](https://github.com/kdabir/has) for checking dependencies and versions
 `git clone https://github.com/kdabir/has.git && cd has && make install`
+- With PHPCS and WPCS installed, we've gotta tell PHPCS where to find WPCS
+`phpcs --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs`
 
 
 ### VirtualBox, Vagrant, & VVV
 
 - Ensure that Virtual Box and Vagrant are installed
 - Install vagrant-hostupdater `vagrant plugin install vagrant-hostsupdater`
-- Install vagrant-vbguest `vagrant plugin install vagrant-vbguest`
 - Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`
 - Move to vagrant-local `cd vagrant-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
@@ -228,7 +233,6 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 
 - Login to Chrome to download and setup extensions
 - Login to Dropbox and get files
-- Login to Evernote and enable Web Clipper
 - Login to all active Slack teams
 - Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
 - Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
@@ -251,12 +255,6 @@ done
 
 ### Sublime Text 3
 - License Sublime Text and SFTP (license and instructions in email)
-- Install Package Control by opening Sublime Text, opening the command prompt with ctrl+`, and entering the installation script. It can be found at https://packagecontrol.io/installation, with the most recent script being:
-```
-import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
-
-```
-- Install Packages: Accessibility, ACF Snippets, Ayu Theme, BracketHighlighter, CSS Completions, Diffy, EditorConfig, Genesis, Gist,  JSLint, JSONLint, PHPCdoeBeautifier, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-contrib-php-cs-fixer, SublimeLinter-php, SublimeLinter-phpcs, Text Pastry, WordPress Completions, WordPress Customizer
 - Symlink so I can open files in Sublime from the command line
 ```
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
@@ -265,6 +263,14 @@ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local
 ```
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 ```
+
+The below are currently negated by my use of PackageSync and Mackup, but for reference:
+- Install Package Control by opening Sublime Text, opening the command prompt with ctrl+`, and entering the installation script. It can be found at https://packagecontrol.io/installation, with the most recent script being:
+```
+import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+
+```
+- Install Packages: Accessibility, ACF Snippets, Ayu Theme, BracketHighlighter, CSS Completions, Diffy, EditorConfig, Genesis, Gist,  JSLint, JSONLint, PHPCdoeBeautifier, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-contrib-php-cs-fixer, SublimeLinter-php, SublimeLinter-phpcs, Text Pastry, WordPress Completions, WordPress Customizer
 
 
 ### Gitting on with Git
@@ -369,6 +375,8 @@ I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I c
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
 Next up, activate automatic expansions, which will prompt you to allow access via OSX.
+
+I use preferences stored in Dropbox, so as long as I remember to set them up before saving anything else, it should pull all of my workflows and settings in. Here are a few of them that I use from time to time.
 
 - [Route to contact or location]
 (http://www.packal.org/workflow/route-contact-or-location) - type "route" and a name or address, get a Google Map from my current location
