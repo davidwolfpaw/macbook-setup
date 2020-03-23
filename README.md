@@ -1,4 +1,4 @@
-# David's Mac OSX v10.14 macOS Mojave Setup Guide
+# David's Mac OSX v10.15 macOS Catalina Setup Guide
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
@@ -12,7 +12,7 @@ I generally am doing this because I'm reformatting an old computer because I hav
 
 - Calibre - Library is saved in user files, backup from computer
 - Chrome - OneTab should be bookmarked, and the rest Chrome syncs itself
-- Firefox - Firefox syncs itself
+- Firefox - Firefox syncs itself, sync extensions like Privacy Badger manually
 - iTerm2 - Syncing preferences to Dropbox
 - Sublime Text Preferences - PackageSync creates a zip for me. Save current workspace as well to Dropbox
 - Transmit Favorites - Must be manually synced for me using their export tool, or use Panic Sync
@@ -55,34 +55,31 @@ brew tap homebrew/cask-fonts
 _Yes, you can run this all as one `brew install` command followed by the list of applications, but some require additional input or could have other issues installing, so I run them separately to give an easy way to continue if needed_
 
 ```
-brew install ack
 brew install arp-scan
-brew install asciidoc
 brew install bat
 brew install brew-cask-completion
 brew install cask
 brew install cmake
 brew install composer
+brew install curl
 brew install diff-so-fancy
+brew install eslint
 brew install fd
 brew install fzf
 brew install ghostscript
 brew install git
 brew install highlight
-brew install html2text
 brew install htop
 brew install imagemagick
-brew install libiconv
-brew install libmagic
-brew install libu2f-host
-brew install libxml2
 brew install mackup
 brew install markdown
 brew install ncdu
 brew install nmap
 brew install noti
+brew install openjdk
 brew install pandoc
 brew install phplint
+brew install pipenv
 brew install prettyping
 brew install vassh
 brew install vim
@@ -117,6 +114,7 @@ brew cask install adobe-digital-editions
 brew cask install alfred
 brew cask install calibre
 brew cask install cleanmymac
+brew cask install dbeaver-community
 brew cask install dropbox
 brew cask install firefox
 brew cask install font-hack
@@ -131,13 +129,13 @@ brew cask install nordvpn
 brew cask install qlcolorcode
 brew cask install qlmarkdown
 brew cask install qlprettypatch
-brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
 brew cask install spectacle
 brew cask install sublime-text
+brew cask install the-unarchiver
 brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
@@ -147,25 +145,31 @@ brew cask install webpquicklook
 brew cask install arduino
 brew cask install balenaetcher
 brew cask install boostnote
-brew cask install franz
 brew cask install owasp-zap
 brew cask install simplenote
 brew cask install slack
 brew cask install steam
 brew cask install suspicious-package
 brew cask install telegram
+brew cask install thunderbird
+brew cask install zotero
 ```
 
 ### Additional Command Line Installs
 #### NPM Tools
 ```
 npm install -g csslint
+npm install -g eslint
+npm install -g eslint-config-wordpress
 npm install -g gulp-cli
 npm install -g how-2
 npm install -g imageoptim-cli
 npm install -g prettier
+npm install -g prettier-stylelint
+npm install -g stylelint
+npm install -g stylelint-config-wordpress
+npm install -g stylelint-order
 npm install -g undollar
-npm install -g yo
 ```
 
 #### Composer Tools
@@ -231,7 +235,7 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 
 ### Set Up Applications
 
-- Login to Chrome to download and setup extensions
+- Login to Chrome & Firefox to download and setup extensions
 - Login to Dropbox and get files
 - Login to all active Slack teams
 - Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
