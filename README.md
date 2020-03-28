@@ -116,7 +116,6 @@ brew cask install calibre
 brew cask install cleanmymac
 brew cask install dbeaver-community
 brew cask install dropbox
-brew cask install firefox
 brew cask install font-hack
 brew cask install font-hack-nerd-font
 brew cask install font-roboto
@@ -142,12 +141,12 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install webpquicklook
 
+// Some of my maybe installs
 brew cask install arduino
 brew cask install balenaetcher
 brew cask install boostnote
 brew cask install owasp-zap
 brew cask install simplenote
-brew cask install slack
 brew cask install steam
 brew cask install suspicious-package
 brew cask install telegram
@@ -440,7 +439,7 @@ Some of the below and some of the setup from above can be done with [Mackup](htt
 ### General Settings
 
 - Turn off all stupid notifications and badges/banners/butchers of concentration
-- Set Chrome as the default browser
+- Set Firefox Developer Edition as the default browser
 - Set Recent items to none
 - Make dock nice and tiny
 - Set time format to 24-hour time
@@ -458,6 +457,7 @@ Some of the below and some of the setup from above can be done with [Mackup](htt
 - Ensure that guest account is off, and main account profile is set
 - Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
 - Make notification banners only display for three seconds, because ten is ridiculous. `defaults write com.apple.notificationcenterui bannerTime 3`
+- Change screenshots to jpg `defaults write com.apple.screencapture type jpg`
 
 
 
