@@ -65,6 +65,7 @@ brew install curl
 brew install diff-so-fancy
 brew install eslint
 brew install fd
+brew install ffmpeg
 brew install fzf
 brew install ghostscript
 brew install git
@@ -87,6 +88,7 @@ brew install webtorrent-cli
 brew install wget
 brew install wp-cli
 brew install wp-cli-completion
+brew install youtube-dl
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
@@ -110,8 +112,9 @@ brew install ykman
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
-brew cask install adobe-digital-editions
+brew cask install adoptopenjdk8
 brew cask install alfred
+brew cask install balenaetcher
 brew cask install calibre
 brew cask install cleanmymac
 brew cask install dbeaver-community
