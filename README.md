@@ -160,17 +160,26 @@ brew cask install zotero
 ### Additional Command Line Installs
 #### NPM Tools
 ```
+npm install -g alex
 npm install -g csslint
 npm install -g eslint
 npm install -g eslint-config-wordpress
 npm install -g gulp-cli
 npm install -g how-2
 npm install -g imageoptim-cli
+npm install -g markdownlint-cli
 npm install -g prettier
 npm install -g prettier-stylelint
 npm install -g stylelint
+npm install -g stylelint-config-standard
 npm install -g stylelint-config-wordpress
 npm install -g stylelint-order
+npm install -g textlint
+npm install -g textlint-rule-alex
+npm install -g textlint-rule-common-misspellings
+npm install -g textlint-rule-diacritics
+npm install -g textlint-rule-rousseau
+npm install -g textlint-rule-stop-words
 npm install -g undollar
 ```
 
