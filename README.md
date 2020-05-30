@@ -178,6 +178,7 @@ npm install -g textlint
 npm install -g textlint-rule-alex
 npm install -g textlint-rule-common-misspellings
 npm install -g textlint-rule-diacritics
+npm install -g textlint-rule-en-spell
 npm install -g textlint-rule-rousseau
 npm install -g textlint-rule-stop-words
 npm install -g undollar
