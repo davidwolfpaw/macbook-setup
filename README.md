@@ -112,7 +112,7 @@ brew install ykman
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
-brew cask install adoptopenjdk8
+brew cask install adoptopenjdk
 brew cask install alfred
 brew cask install balenaetcher
 brew cask install calibre
@@ -137,6 +137,7 @@ brew cask install sequel-pro
 brew cask install signal
 brew cask install spectacle
 brew cask install sublime-text
+brew cask install telegram
 brew cask install the-unarchiver
 brew cask install transmit
 brew cask install vagrant
@@ -146,13 +147,10 @@ brew cask install webpquicklook
 
 // Some of my maybe installs
 brew cask install arduino
-brew cask install balenaetcher
 brew cask install boostnote
 brew cask install owasp-zap
 brew cask install simplenote
 brew cask install steam
-brew cask install suspicious-package
-brew cask install telegram
 brew cask install thunderbird
 brew cask install zotero
 ```
