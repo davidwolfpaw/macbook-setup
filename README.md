@@ -176,9 +176,15 @@ npm install -g textlint
 npm install -g textlint-rule-alex
 npm install -g textlint-rule-common-misspellings
 npm install -g textlint-rule-diacritics
+npm install -g textlint-rule-en-max-word-count
 npm install -g textlint-rule-en-spell
+npm install -g textlint-rule-no-dead-link
+npm install -g textlint-rule-no-start-duplicated-conjunction
 npm install -g textlint-rule-rousseau
 npm install -g textlint-rule-stop-words
+npm install -g textlint-rule-terminology
+npm install -g @textlint-rule/textlint-rule-no-unmatched-pair
+npm install -g @textlint-rule/textlint-rule-require-header-id
 npm install -g undollar
 ```
 
