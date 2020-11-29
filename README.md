@@ -40,7 +40,7 @@ xcode-select --install
 ##### Install Homebrew
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew doctor
 ```
 
@@ -89,7 +89,6 @@ brew install wget
 brew install wp-cli
 brew install wp-cli-completion
 brew install youtube-dl
-brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
 
@@ -105,6 +104,7 @@ brew install thefuck
 brew install tldr
 brew install wrk
 brew install ykman
+brew install zsh
 ```
 
 ##### Install applications via Homebrew Cask
@@ -119,6 +119,7 @@ brew cask install calibre
 brew cask install cleanmymac
 brew cask install dbeaver-community
 brew cask install dropbox
+brew cask install firefox-developer-edition
 brew cask install font-hack
 brew cask install font-hack-nerd-font
 brew cask install font-roboto
@@ -128,11 +129,6 @@ brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install nordvpn
-brew cask install qlcolorcode
-brew cask install qlmarkdown
-brew cask install qlprettypatch
-brew cask install quicklook-csv
-brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install signal
 brew cask install spectacle
@@ -143,15 +139,20 @@ brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
-brew cask install webpquicklook
 
 // Some of my maybe installs
 brew cask install arduino
 brew cask install boostnote
 brew cask install owasp-zap
+brew cask install qlcolorcode
+brew cask install qlmarkdown
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install quicklook-json
 brew cask install simplenote
 brew cask install steam
 brew cask install thunderbird
+brew cask install webpquicklook
 brew cask install zotero
 ```
 
@@ -218,6 +219,7 @@ alias gits="git status"
 alias gita="git add ."
 alias gitc="git commit -m"
 alias gitpom="git push -u origin master"
+alias sizesort="du -d 1 -h | sort -h"
 ```
 
 #### Misc Tools
@@ -230,7 +232,6 @@ alias gitpom="git push -u origin master"
 ### VirtualBox, Vagrant, & VVV
 
 - Ensure that Virtual Box and Vagrant are installed
-- Install vagrant-hostupdater `vagrant plugin install vagrant-hostsupdater`
 - Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`
 - Move to vagrant-local `cd vagrant-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
@@ -388,9 +389,9 @@ ssh-keygen -t rsa -b 8192 -C "your@email.com"
 `ssh -T git@github.com`
 
 
-### Alfred 3
+### Alfred 4
 
-I use [Alfred 3](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers. I have all of my preferences saved in Dropbox, but here is an incomplete list of regularly used workflows and settings.
+I use [Alfred 4](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers. I have all of my preferences saved in Dropbox, but here is an incomplete list of regularly used workflows and settings.
 
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
