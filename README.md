@@ -1,4 +1,4 @@
-# David's Mac OSX v10.15 macOS Catalina Setup Guide
+# David's Mac OSX v11.2 macOS BigSur Setup Guide
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
@@ -163,6 +163,8 @@ npm install -g alex
 npm install -g csslint
 npm install -g eslint
 npm install -g eslint-config-wordpress
+npm install -g --save-dev eslint-plugin-prettier
+npm install -g --save-dev --save-exact prettier
 npm install -g gulp-cli
 npm install -g how-2
 npm install -g imageoptim-cli
