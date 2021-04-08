@@ -171,6 +171,7 @@ npm install -g imageoptim-cli
 npm install -g markdownlint-cli
 npm install -g prettier
 npm install -g prettier-stylelint
+npm install -g @wordpress/prettier-config --save-dev
 npm install -g stylelint
 npm install -g stylelint-config-standard
 npm install -g stylelint-config-wordpress
