@@ -1,4 +1,4 @@
-# David's Mac OSX v11.2 macOS BigSur Setup Guide
+# david's Mac OS X 12.0 macOS Monterey Setup Guide
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
@@ -67,6 +67,7 @@ brew install eslint
 brew install fd
 brew install ffmpeg
 brew install fzf
+brew install gh
 brew install ghostscript
 brew install git
 brew install highlight
@@ -74,6 +75,7 @@ brew install htop
 brew install imagemagick
 brew install mackup
 brew install markdown
+brew install mupdf
 brew install ncdu
 brew install nmap
 brew install noti
@@ -82,6 +84,7 @@ brew install pandoc
 brew install phplint
 brew install pipenv
 brew install prettyping
+brew install subversion
 brew install vassh
 brew install vim
 brew install webtorrent-cli
@@ -98,7 +101,6 @@ brew install gnupg
 brew install go
 brew install hopenpgp-tools
 brew install imageoptim-cli
-brew install lastpass-cli --with-pinentry --with-doc
 brew install pkg-config
 brew install thefuck
 brew install tldr
@@ -112,48 +114,51 @@ brew install zsh
 Seriously, barring the insertion of malicious code or lack of checksums (two things which should honestly scare me away of many), Cask is pretty useful. I'm choosing to be willfully ignorant, since broadcasting usage opens me up anyway, and this saves a lot of time.
 
 ```
-brew cask install adoptopenjdk
-brew cask install alfred
-brew cask install balenaetcher
-brew cask install calibre
-brew cask install cleanmymac
-brew cask install dbeaver-community
-brew cask install dropbox
-brew cask install firefox-developer-edition
-brew cask install font-hack
-brew cask install font-hack-nerd-font
-brew cask install font-roboto
-brew cask install font-roboto-mono
-brew cask install font-source-code-pro
-brew cask install google-chrome
-brew cask install imageoptim
-brew cask install iterm2
-brew cask install nordvpn
-brew cask install sequel-pro
-brew cask install signal
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install telegram
-brew cask install the-unarchiver
-brew cask install transmit
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install vlc
+brew install 1password
+brew install adoptopenjdk
+brew install alfred
+brew install calibre
+brew install cleanmymac
+brew install dropbox
+brew install firefox-developer-edition
+brew install font-hack
+brew install font-hack-nerd-font
+brew install font-roboto
+brew install font-roboto-mono
+brew install font-source-code-pro
+brew install google-chrome
+brew install imageoptim
+brew install iterm2
+brew install signal
+brew install spectacle
+brew install telegram
+brew install the-unarchiver
+brew install transmit
+brew install vagrant
+brew install virtualbox
+brew install vlc
 
 // Some of my maybe installs
-brew cask install arduino
-brew cask install boostnote
-brew cask install owasp-zap
-brew cask install qlcolorcode
-brew cask install qlmarkdown
-brew cask install qlprettypatch
-brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install simplenote
-brew cask install steam
-brew cask install thunderbird
-brew cask install webpquicklook
-brew cask install zotero
+brew install arduino
+brew install balenaetcher
+brew install boostnote
+brew install dbeaver-community
+brew install elmedia-player
+brew install fsnotes
+brew install owasp-zap
+brew install qlcolorcode
+brew install qlmarkdown
+brew install qlprettypatch
+brew install quicklook-csv
+brew install quicklook-json
+brew install sequel-pro
+brew install simplenote
+brew install spotify
+brew install steam
+brew install sublime-text
+brew install thunderbird
+brew install webpquicklook
+brew install zotero
 ```
 
 ### Additional Command Line Installs
