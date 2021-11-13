@@ -24,7 +24,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 
 ### Install from App Store/Web
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12)
-- [Giphy Capture](https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12)
 - [Pixelmator](https://itunes.apple.com/us/app/pixelmator/id407963104?mt=12)
 - [VS Code](https://code.visualstudio.com/download)
 
@@ -240,8 +239,8 @@ alias sizesort="du -d 1 -h | sort -h"
 ### VirtualBox, Vagrant, & VVV
 
 - Ensure that Virtual Box and Vagrant are installed
-- Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`
-- Move to vagrant-local `cd vagrant-local`
+- Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vvv-local`
+- Move to vagrant-local `cd vvv-local`
 - Run our first Vagrant up and wait a long long time `vagrant up`
 - Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
 - Turn on [xDebug](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Code-Debugging#turning-on-xdebug) with `vagrant ssh` then `xdebug_on`
@@ -262,8 +261,7 @@ Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
 
 - Login to Chrome & Firefox to download and setup extensions
 - Login to Dropbox and get files
-- Login to all active Slack teams
-- Make dev files that I use open in Sublime Text (things like .txt, .sh, .json)
+- Make dev files that I use open in VS Code (things like .txt, .sh, .json)
 - Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
 - Load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
 - I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.zshrc` file:
@@ -282,7 +280,7 @@ done
 ```
 
 
-### Sublime Text 3
+### Sublime Text 3 (outdated)
 - License Sublime Text and SFTP (license and instructions in email)
 - Symlink so I can open files in Sublime from the command line
 ```
