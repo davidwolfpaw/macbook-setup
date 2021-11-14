@@ -227,6 +227,10 @@ alias gita="git add ."
 alias gitc="git commit -m"
 alias gitpom="git push -u origin master"
 alias sizesort="du -d 1 -h | sort -h"
+alias sizesort="du -d 1 -h | sort -h"
+alias fixcamera="sudo killall VDCAssistant"
+alias fixaudio="sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
+alias fixbluetooth="sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist"
 ```
 
 #### Misc Tools
@@ -309,7 +313,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 git config --global github.user githubusername
 git config --global push.default current
-git config --global core.editor "subl -w"
+git config --global core.editor "code -wait"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global color.ui true
 git config --global color.diff-highlight.oldNormal    "red bold"
@@ -365,6 +369,7 @@ Thumbs.db
 /.idea
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
 ```
 
 I then save that file and add it to global exclude those files:
