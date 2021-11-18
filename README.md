@@ -303,6 +303,16 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 ```
 - Install Packages: Accessibility, ACF Snippets, Ayu Theme, BracketHighlighter, CSS Completions, Diffy, EditorConfig, Genesis, Gist,  JSLint, JSONLint, PHPCdoeBeautifier, SFTP, SidebarEnhancements, SublimeLinter, SublimeLinter-contrib-php-cs-fixer, SublimeLinter-php, SublimeLinter-phpcs, Text Pastry, WordPress Completions, WordPress Customizer
 
+### VS Code
+I've started using VS Code in part because it feels that everyone else has switched and that's where I can get updated plugins and tutorials and tooling.
+
+One tool that I use is an SFTP uploader that needs a little fix, [found in this thread](https://github.com/liximomo/vscode-sftp/issues/919#issuecomment-838586635)
+```
+Do a search inside ~/.vscode/extensions/liximomo.sftp-1.12.9/node_modules/ssh2-streams/lib/sftp.js
+for options.emitClose = false;
+
+Add options.autoDestroy = false; after both instances.
+```
 
 ### Gitting on with Git
 - Xcode and git are installed, right?
