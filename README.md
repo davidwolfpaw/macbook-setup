@@ -323,6 +323,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 git config --global github.user githubusername
 git config --global push.default current
+git config --global merge.conflictstyle diff3
 git config --global core.editor "code -wait"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global color.ui true
