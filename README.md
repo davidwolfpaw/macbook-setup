@@ -1,4 +1,4 @@
-# david's Mac OS X 12.0 macOS Monterey Setup Guide
+# david's Mac OS X 13.2 macOS Ventura Setup Guide
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
@@ -28,9 +28,9 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [VS Code](https://code.visualstudio.com/download)
 
 ### Homebrew
-##### Run Xcode and accept the license
+##### Run Xcode and accept the license _(no longer needed in macOS 12+)_
 
-Homebrew can not install properly until this occurs.
+Homebrew can not install properly until this occurs. _(no longer needed in macOS 12+)_
 
 ```
 xcode-select --install
@@ -39,11 +39,10 @@ xcode-select --install
 ##### Install Homebrew
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew doctor
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-##### Install Homebrew extension Cask
+##### Install Homebrew extension Cask _(no longer needed in macOS 12+)_
 
 ```
 brew install cask
@@ -56,22 +55,22 @@ _Yes, you can run this all as one `brew install` command followed by the list of
 ```
 brew install arp-scan
 brew install bat
-brew install brew-cask-completion
-brew install cask
+brew install blueutil
 brew install cmake
-brew install composer
-brew install curl
-brew install diff-so-fancy
-brew install eslint
 brew install fd
 brew install ffmpeg
+brew install freeglut
 brew install fzf
 brew install gh
 brew install ghostscript
+brew install gifsicle
 brew install git
+brew install grep
 brew install highlight
 brew install htop
 brew install imagemagick
+brew install imageoptim-cli
+brew install jpegoptim
 brew install mackup
 brew install markdown
 brew install mupdf
@@ -79,33 +78,26 @@ brew install ncdu
 brew install nmap
 brew install noti
 brew install openjdk
+brew install optipng
+brew install oxipng
 brew install pandoc
+brew install php
 brew install phplint
 brew install pipenv
 brew install prettyping
 brew install subversion
-brew install vassh
 brew install vim
 brew install webtorrent-cli
 brew install wget
 brew install wp-cli
 brew install wp-cli-completion
 brew install youtube-dl
+brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
-
-brew install awscli
-brew install docbook-xsl
-brew install gnupg
-brew install go
-brew install hopenpgp-tools
-brew install imageoptim-cli
-brew install pkg-config
-brew install thefuck
-brew install tldr
-brew install wrk
-brew install ykman
-brew install zsh
+brew install pngcrush
+brew install pngquant
+brew install zopfli
 ```
 
 ##### Install applications via Homebrew Cask
@@ -114,10 +106,14 @@ Seriously, barring the insertion of malicious code or lack of checksums (two thi
 
 ```
 brew install 1password
+brew install 1password-cli
 brew install adoptopenjdk
 brew install alfred
+brew install audacity
 brew install calibre
 brew install cleanmymac
+brew install devonthink
+brew install discord
 brew install dropbox
 brew install firefox-developer-edition
 brew install font-hack
@@ -127,37 +123,31 @@ brew install font-roboto-mono
 brew install font-source-code-pro
 brew install google-chrome
 brew install imageoptim
+brew install inky
 brew install iterm2
-brew install signal
+brew install local
+brew install obsidian
 brew install spectacle
 brew install telegram
+brew install temurin
 brew install the-unarchiver
 brew install transmit
-brew install vagrant
-brew install virtualbox
+brew install twine
 brew install vlc
+brew install xnviewmp
 
 // Some of my maybe installs
 brew install arduino
 brew install balenaetcher
-brew install boostnote
-brew install dbeaver-community
-brew install elmedia-player
-brew install fsnotes
-brew install owasp-zap
 brew install qlcolorcode
 brew install qlmarkdown
 brew install qlprettypatch
 brew install quicklook-csv
 brew install quicklook-json
 brew install sequel-pro
-brew install simplenote
-brew install spotify
 brew install steam
 brew install sublime-text
-brew install thunderbird
 brew install webpquicklook
-brew install zotero
 ```
 
 ### Additional Command Line Installs
@@ -222,15 +212,18 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias du="ncdu --color dark -rr -x --exclude .git"
+alias top="htop"
 alias gits="git status"
 alias gita="git add ."
 alias gitc="git commit -m"
-alias gitpom="git push -u origin master"
+alias gitpom="git push -u origin main"
 alias sizesort="du -d 1 -h | sort -h"
 alias sizesort="du -d 1 -h | sort -h"
 alias fixcamera="sudo killall VDCAssistant"
 alias fixaudio="sudo kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
 alias fixbluetooth="sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist"
+alias torrent="torrent.sh"
+alias pdfcompress="_pdf_compress"
 ```
 
 #### Misc Tools
@@ -238,27 +231,6 @@ alias fixbluetooth="sudo rm -R /Library/Preferences/com.apple.Bluetooth.plist"
 `git clone https://github.com/kdabir/has.git && cd has && make install`
 - With PHPCS and WPCS installed, we've gotta tell PHPCS where to find WPCS
 `phpcs --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs`
-
-
-### VirtualBox, Vagrant, & VVV
-
-- Ensure that Virtual Box and Vagrant are installed
-- Clone VVV `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vvv-local`
-- Move to vagrant-local `cd vvv-local`
-- Run our first Vagrant up and wait a long long time `vagrant up`
-- Look, at this point you probably need a coffee or something. Relax, you're doing great, and treat yourself to that caffeinated goodness.
-- Turn on [xDebug](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Code-Debugging#turning-on-xdebug) with `vagrant ssh` then `xdebug_on`
-- Setup a command in sudoers to skip the password for `vagrant up, vagrant halt, vagrant reload` by using the command `sudo visudo` then entering the following at the end of the file, and exiting vi by typing esc, then `:wq`
-
-```
-# Allow passwordless startup of Vagrant when using NFS and vagrant-hostsupdater plugin
-Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-Cmnd_Alias VAGRANT_HOSTSUPDATER_ADD = /bin/sh -c echo "*" >> /etc/hosts
-Cmnd_Alias VAGRANT_HOSTSUPDATER_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
-%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE, VAGRANT_HOSTSUPDATER_ADD, VAGRANT_HOSTSUPDATER_REMOVE
-```
 
 
 ### Set Up Applications
@@ -323,6 +295,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 git config --global github.user githubusername
 git config --global push.default current
+git config --global init.defaultBranch "main"
 git config --global merge.conflictstyle diff3
 git config --global core.editor "code -wait"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
@@ -411,34 +384,15 @@ ssh-keygen -t rsa -b 8192 -C "your@email.com"
 `ssh -T git@github.com`
 
 
-### Alfred 4
+### Alfred 5
 
-I use [Alfred 4](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers. I have all of my preferences saved in Dropbox, but here is an incomplete list of regularly used workflows and settings.
+I use [Alfred 5](https://www.alfredapp.com/) though not quite as in-depth as I could. Still, I've found a few workflows that have been useful time savers. I have all of my preferences saved in Dropbox, but here is an incomplete list of regularly used workflows and settings.
 
 First thing is to enable the paid Powerpack. The license is in the email account that I purchased it with.
 
 Next up, activate automatic expansions, which will prompt you to allow access via OSX.
 
-I use preferences stored in Dropbox, so as long as I remember to set them up before saving anything else, it should pull all of my workflows and settings in. Here are a few of them that I use from time to time.
-
-- [Route to contact or location]
-(http://www.packal.org/workflow/route-contact-or-location) - type "route" and a name or address, get a Google Map from my current location
-- Install Capture::Tiny to make the Lastpass CLI work
-`sudo cpan install Capture::Tiny`
-- [Lastpass CLI Workflow](http://www.packal.org/workflow/lastpass-cli-workflow-alfred) - Quickly search Lastpass
-- Set Lastpass email in Alfred settings with
-`lpsetemail your@email.com`
-- [Transmit](http://www.packal.org/workflow/transmit) - search and open favorites in Transmit 4 using the keyword "default ftp"
-- [Launch URL in 3 browsers](http://www.packal.org/workflow/launch-url-3-browsers) - use "test" and a URL to open that site in Firefox, Chrome, and Safari
-- [Network Tools](http://www.packal.org/workflow/network-tools) - make stuff like pings and cache flush fast
-- [Wi-Fi Restart](http://www.packal.org/workflow/wi-fi-restart) - I hate needing this, but my computer just doesn't like staying connected. What am I doing wrong, computer!
-- [Giphy](http://www.packal.org/workflow/giphy) - Use the command "giphy" to find the perfect gif
-- [gitignore](http://www.packal.org/workflow/gitignore-0) - Create common .gitignore file templates. Use `gitignore-update` on first run to download templates
-- [PHP Doc Search](http://www.packal.org/workflow/php-doc-search) - use "phpdoc" to search php.net
-- [Alfred Drive Workflow](http://www.packal.org/workflow/google-drive) - Search Google Drive with "d"
-- [OS X Toolbox](http://sayzlim.net/os-x-toolbox-workflow-alfred-2/) - tools to relaunch finder and dock, purge inactive memory, toggle desktop, toggle system files, and rebuild launch services.
-- [Secure Password Generator](http://www.packal.org/workflow/secure-password-generator) - Make some secure passwords to copy to clipboard easily
-- [Emoji Codes](https://github.com/carlosgaldino/alfred-emoji-workflow) - I can't not use emoji now, join the crowd
+I use preferences stored in Dropbox, so as long as I remember to set them up before saving anything else, it should pull all of my workflows and settings in.
 
 I use iTerm2, which needs to be setup as a custom shell integration in Alfred. I use the following, which opens iTerm if not open, and opens a new tab to run your commands if it is already open.
 
