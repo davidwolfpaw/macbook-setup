@@ -36,10 +36,9 @@ This is the software that I use on a very regular basis. Not all software is lis
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-##### Install Homebrew extension Cask _(no longer needed in macOS 12+)_
+##### Install Homebrew extension Cask
 
 ```
-brew install cask
 brew tap homebrew/cask-fonts
 ```
 
