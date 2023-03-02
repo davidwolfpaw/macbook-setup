@@ -16,6 +16,7 @@ I generally am doing this because I'm reformatting an old computer because I hav
 - iTerm2 - Syncing preferences to Dropbox
 - Sublime Text Preferences - PackageSync creates a zip for me. Save current workspace as well to Dropbox
 - Transmit Favorites - Must be manually synced for me using their export tool, or use Panic Sync
+- VS Code - 
 
 
 ## Install Basic Software
@@ -28,13 +29,6 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [VS Code](https://code.visualstudio.com/download)
 
 ### Homebrew
-##### Run Xcode and accept the license _(no longer needed in macOS 12+)_
-
-Homebrew can not install properly until this occurs. _(no longer needed in macOS 12+)_
-
-```
-xcode-select --install
-```
 
 ##### Install Homebrew
 
@@ -84,6 +78,8 @@ brew install pandoc
 brew install php
 brew install phplint
 brew install pipenv
+brew install pngcrush
+brew install pngquant
 brew install prettyping
 brew install subversion
 brew install vim
@@ -95,8 +91,6 @@ brew install youtube-dl
 brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
-brew install pngcrush
-brew install pngquant
 brew install zopfli
 ```
 
@@ -127,7 +121,7 @@ brew install inky
 brew install iterm2
 brew install local
 brew install obsidian
-brew install spectacle
+brew install rectangle
 brew install telegram
 brew install temurin
 brew install the-unarchiver
@@ -238,7 +232,7 @@ alias pdfcompress="_pdf_compress"
 - Login to Chrome & Firefox to download and setup extensions
 - Login to Dropbox and get files
 - Make dev files that I use open in VS Code (things like .txt, .sh, .json)
-- Setup Spectacle shortcuts so they don't interfere with Chrome shortcuts
+- Setup Rectangle shortcuts so they don't interfere with Firefox shortcuts
 - Load existing iTerm2 .plist file from Dropbox, most likely running `killall cfprefsd` with it closed to clear the cached file
 - I save custom scripts in Dropbox because I would probably lose them somehow otherwise. The files here have to be sourced, and the folder has to be added to the PATH environment variable. Both of those are accomplished with this portion of my `.zshrc` file:
 ```
@@ -441,13 +435,12 @@ Some of the below and some of the setup from above can be done with [Mackup](htt
 - Set key repeat to fast and delay until repeat to short
 - Turn off keyboard brightness when computer is unused
 - Setup replacement texts (like yall) so it doesn't try autocorrecting my informalities
-- Add Colemak input source
 - Set trackpad click to light, tracking speed to rather fast, and silent clicking
 - Turn off launchpad trackpad gesture
-- Setup internet accounts (email, Twitter)
-- Show bluetooth in menu bar
-- Show battery percentage in menu bar
-- Show date and time but not day in menu bar
+- Setup internet accounts
+- Show bluetooth in control center
+- Show battery percentage in control center
+- Show date and time in menu bar
 - Ensure that guest account is off, and main account profile is set
 - Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
 - Make notification banners only display for three seconds, because ten is ridiculous. `defaults write com.apple.notificationcenterui bannerTime 3`
