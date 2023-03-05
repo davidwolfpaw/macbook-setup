@@ -29,6 +29,7 @@ This is the software that I use on a very regular basis. Not all software is lis
 - [VS Code](https://code.visualstudio.com/download)
 - [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)
 - [Monitor Control](https://github.com/MonitorControl/MonitorControl)
+- [Better Display](https://github.com/waydabber/BetterDisplay)
 
 ### Homebrew
 
