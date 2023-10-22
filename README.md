@@ -507,7 +507,8 @@ Some of the below and some of the setup from above can be done with [Mackup](htt
 - Show all files including hidden ones `defaults write com.apple.finder AppleShowAllFiles YES;`
 - Make notification banners only display for three seconds, because ten is ridiculous. `defaults write com.apple.notificationcenterui bannerTime 3`
 - Change screenshots to jpg `defaults write com.apple.screencapture type jpg`
-
+- Disable .DS_Store files on network shares `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE`
+- Disable .DS_Store files on removable media `defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE`
 
 
 At this point, you're probably done with computers, the internet, everything. At the very least, when you regain consciousness, your computer will be mainly good to go!
