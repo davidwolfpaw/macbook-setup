@@ -1,0 +1,196 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+			"key": "ctrl+cmd+k",
+			"command": "workbench.action.terminal.focus"
+	},
+	{
+			"key": "ctrl+cmd+l",
+			"command": "workbench.action.focusActiveEditorGroup"
+	},
+	/** paste current file path into focused integrated terminal **/
+	{
+			"key": "ctrl+cmd+t",
+			"command": "workbench.action.terminal.sendSequence",
+			"args": {
+					"text": "'${file}'\u000D"
+			},
+			"when": "terminalFocus"
+	},
+	/** Open current working directory in integrated terminal **/
+	{
+			"key": "cmd+shift+h",
+			"command": "workbench.action.terminal.newWithCwd",
+			"args": {
+					"cwd": "${fileDirname}"
+			}
+	},
+	/**
+	* Activity Bar
+	**/
+	{
+			"key": "cmd+k cmd+e",
+			"command": "workbench.view.explorer"
+	},
+	{
+			"key": "cmd+k cmd+g",
+			"command": "workbench.view.scm"
+	},
+	{
+			"key": "cmd+k cmd+d",
+			"command": "workbench.view.debug"
+	},
+	{
+			"key": "cmd+k cmd+x",
+			"command": "workbench.view.extensions"
+	},
+	/**
+	* Note Macros
+	**/
+	{
+			"key": "ctrl+cmd+w",
+			"command": "note-macros.weeklyNote"
+	},
+	{
+			"key": "ctrl+cmd+b",
+			"command": "codiga.listShortcuts"
+	},
+	{
+			"key": "shift+cmd+s",
+			"command": "-codiga.listShortcuts"
+	},
+	{
+			"key": "ctrl+cmd+g",
+			"command": "codiga.showWebview"
+	},
+	{
+			"key": "shift+cmd+c",
+			"command": "-codiga.showWebview"
+	},
+	{
+			"key": "cmd+t",
+			"command": "workbench.action.terminal.toggleTerminal"
+	},
+	{
+			"key": "cmd+e",
+			"command": "workbench.action.focusActiveEditorGroup",
+	},
+	/**
+	* Hide Toaster Notifications
+	**/
+	{
+			"key": "escape",
+			"command": "notifications.hideToasts",
+			"when": "notificationToastsVisible"
+	},
+	/**
+	* Terminal Split Panel
+	**/
+	{
+			"key": "ctrl+n",
+			"command": "workbench.action.terminal.split",
+			"when": "terminalFocus"
+	},
+	{
+			"key": "ctrl+l",
+			"command": "workbench.action.terminal.focusNextPane",
+			"when": "terminalFocus"
+	},
+	{
+			"key": "ctrl+h",
+			"command": "workbench.action.terminal.focusPreviousPane",
+			"when": "terminalFocus"
+	},
+	{
+			"key": "ctrl+w",
+			"command": "workbench.action.terminal.kill",
+			"when": "terminalFocus"
+	},
+	/**
+	* Line Manipulation
+	**/
+	{
+			"key": "cmd+l",
+			"command": "editor.action.copyLinesDownAction",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+j",
+			"command": "editor.action.joinLines",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "shift+cmd+[",
+			"command": "editor.fold",
+			"when": "editorFocus"
+	},
+	{
+			"key": "shift+cmd+]",
+			"command": "editor.unfold",
+			"when": "editorFocus"
+	},
+	/**
+	* IntelliSense
+	**/
+	{
+			"key": "cmd+r",
+			"command": "workbench.action.gotoSymbol",
+	},
+	{
+			"key": "cmd+shift+r",
+			"command": "workbench.action.showAllSymbols"
+	},
+	{
+			"key": "cmd+k cmd+enter",
+			"command": "editor.action.goToDeclaration",
+			"when": "editorTextFocus"
+	},
+	/**
+	* Emmet
+	**/
+	{
+			"key": "cmd+m cmd+i",
+			"command": "editor.emmet.action.balanceIn",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+o",
+			"command": "editor.emmet.action.balanceOut",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+w",
+			"command": "editor.emmet.action.wrapWithAbbreviation",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+m",
+			"command": "editor.emmet.action.matchTag",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+e",
+			"command": "editor.action.smartSelect.expand",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+r",
+			"command": "editor.emmet.action.updateTag",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "cmd+m cmd+backspace",
+			"command": "editor.emmet.action.removeTag",
+			"when": "editorTextFocus"
+	},
+	{
+			"key": "alt+cmd+x",
+			"command": "workbench.view.extensions",
+			"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+	{
+			"key": "shift+cmd+x",
+			"command": "-workbench.view.extensions",
+			"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+]

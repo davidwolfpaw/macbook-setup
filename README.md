@@ -1,4 +1,6 @@
 # david's macOS Setup Guide
+*Note: this is being rebuilt as a set of install scripts found in `/scripts` and `/configs`. I will be updating the Readme below to match that better soon, while still noting the things that are going on.*
+
 
 Blatantly stealing the idea from Kevin Elliott's [El Capitan Guide](https://gist.github.com/kevinelliott/e12aa642a8388baf2499), I've decided to document as much as I can of my new computer setup guide. There's a lot to do when refreshing a computer or setting one up from scratch, but a bit of planning reduces a ton of pain later on. :relaxed:
 
@@ -16,7 +18,7 @@ I generally am doing this because I'm reformatting an old computer because I hav
 - iTerm2 - Syncing preferences to Dropbox
 - Sublime Text Preferences - PackageSync creates a zip for me. Save current workspace as well to Dropbox
 - Transmit Favorites - Must be manually synced for me using their export tool, or use Panic Sync
-- VS Code - 
+- VS Code -
 
 
 ## Install Basic Software

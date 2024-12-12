@@ -1,0 +1,37 @@
+alex
+corepack
+csslint
+@dbml/cli
+eslint
+eslint-config-wordpress
+--save-dev eslint-plugin-prettier
+--save-dev --save-exact prettier
+gulp-cli
+how-2
+imageoptim-cli
+markdownlint-cli
+node-whois
+pa11y
+prettier
+prettier-stylelint
+@wordpress/prettier-config --save-dev
+stylelint
+stylelint-config-standard
+stylelint-config-wordpress
+stylelint-order
+textlint
+textlint-rule-alex
+textlint-rule-common-misspellings
+textlint-rule-diacritics
+textlint-rule-en-max-word-count
+textlint-rule-en-spell
+textlint-rule-no-dead-link
+textlint-rule-no-start-duplicated-conjunction
+textlint-rule-rousseau
+textlint-rule-stop-words
+textlint-rule-terminology
+@textlint-rule/textlint-rule-no-unmatched-pair
+@textlint-rule/textlint-rule-require-header-id
+undollar
+whois
+@wp-now/wp-now

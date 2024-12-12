@@ -1,0 +1,264 @@
+{
+	/**
+	* Better Defaults
+	**/
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.renderSideBySide": false,
+	"editor.copyWithSyntaxHighlighting": false,
+	"editor.detectIndentation": false,
+	"editor.emptySelectionClipboard": false,
+	"editor.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 15,
+	"editor.lineHeight": 23,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.snippetSuggestions": "top",
+	"editor.suggest.showWords": false,
+	"editor.suggestFontSize": 15,
+	"editor.suggestLineHeight": 23,
+	"explorer.confirmDragAndDrop": false,
+	"extensions.ignoreRecommendations": false,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"security.workspace.trust.untrustedFiles": "open",
+	"telemetry.telemetryLevel": "off",
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.lineHeight": 1.5,
+	"window.nativeFullScreen": false,
+	"window.newWindowDimensions": "inherit",
+	"workbench.editor.tabActionCloseVisibility": false,
+	"workbench.startupEditor": "none",
+	/**
+	* Display
+	**/
+	"debug.toolBarLocation": "docked",
+	"editor.glyphMargin": false,
+	"editor.lineNumbers": "on",
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "all",
+	"editor.wordWrap": "on",
+	"workbench.colorTheme": "Bearded Theme Vivid Black",
+	"workbench.editor.showTabs": "multiple",
+	"workbench.fontAliasing": "auto",
+	"workbench.panel.defaultLocation": "bottom",
+	"workbench.sideBar.location": "right",
+	"workbench.statusBar.visible": true,
+	"editor.tokenColorCustomizations": {
+			"comments": "#9db7d1"
+	},
+	"workbench.colorCustomizations": {
+			"[Bearded Theme Vivid Black]": {
+					"editorBracketMatch.background": "#ff0000",
+					"editorBracketMatch.border": "#ff0000",
+					"editorGutter.background": "#111",
+					"editorLineNumber.foreground": "#ffffff4f"
+			},
+			"[Bearded Theme Vivid Purple]": {
+					"editor.background": "#1a0f2b",
+					"editorBracketMatch.background": "#ff0000",
+					"editorBracketMatch.border": "#ff0000",
+					"editorGutter.background": "#1a0f2b",
+					"editorLineNumber.foreground": "#ffffff66"
+			}
+	},
+	"editor.rulers": [
+			80,
+			100,
+			120
+	],
+	/**
+	* Silence The Noise
+	*/
+	"breadcrumbs.enabled": false,
+	"editor.colorDecorators": false,
+	"editor.gotoLocation.multipleDeclarations": "goto",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.gotoLocation.multipleImplementations": "goto",
+	"editor.gotoLocation.multipleReferences": "goto",
+	"editor.gotoLocation.multipleTypeDefinitions": "goto",
+	"editor.hideCursorInOverviewRuler": true,
+	// "editor.hover.enabled": false,
+	"editor.lightbulb.enabled": "off",
+	"editor.matchBrackets": "never",
+	"editor.occurrencesHighlight": "off",
+	"editor.overviewRulerBorder": false,
+	"editor.renderControlCharacters": false,
+	"editor.renderLineHighlight": "none",
+	"editor.selectionHighlight": false,
+	"git.decorations.enabled": false,
+	"problems.decorations.enabled": false,
+	"scm.countBadge": "off",
+	"scm.diffDecorations": "none",
+	"workbench.editor.enablePreviewFromQuickOpen": true,
+	"workbench.tips.enabled": false,
+	/**
+	* Search
+	**/
+	"search.useIgnoreFiles": false,
+	"search.exclude": {
+			// Hide everything in /vendor, except the "laravel" and "livewire" folder.
+			"**/vendor/{[^l],?[^ai]}*": true,
+			// Hide everything in /public, except "index.php"
+			"**/public/{[^i],?[^n]}*": true,
+			".phpunit.result.cache": true,
+			"**/_ide_helper.php": true,
+			"**/*.map": true,
+			"**/*.min.*": true,
+			"**/*.pot": true,
+			"**/composer.lock": true,
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/package-lock.json": true,
+			"storage": true
+	},
+	/**
+	* Git
+	**/
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	"git.showCommitInput": false,
+	/**
+	* Foam Notes
+	**/
+	"note-macros": {
+			"dailyNote": [
+					{
+							"type": "note",
+							"directory": "Daily",
+							"extension": ".md",
+							"name": "daily-note",
+							"date": "yyyy-mm-dd"
+					}
+			],
+			"weeklyNote": [
+					{
+							"type": "note",
+							"directory": "Weekly",
+							"extension": ".md",
+							"name": "weekly-note",
+							"date": "yyyy-W"
+					}
+			],
+			"monthlyNote": [
+					{
+							"type": "note",
+							"directory": "Monthly",
+							"extension": ".md",
+							"name": "monthly-note",
+							"date": "yyyy-mm"
+					}
+			]
+	},
+	/**
+	* Language specific settings
+	**/
+	"[html]": {
+			"editor.formatOnSave": false,
+			"editor.defaultFormatter": "vscode.html-language-features",
+			"editor.trimAutoWhitespace": true,
+			"files.trimTrailingWhitespace": true
+	},
+	"html.format.preserveNewLines": true,
+	"[css][scss][less]": {
+			// "editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.formatOnSave": true
+	},
+	"[scss]": {
+			"editor.formatOnSave": true,
+			"editor.suggest.insertMode": "replace"
+	},
+	"[php]": {
+			"editor.detectIndentation": true,
+			"editor.useTabStops": true,
+			"editor.formatOnSave": true,
+			"editor.insertSpaces": false,
+			"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+	},
+	"[javascript][javascriptreact][typescript]": {
+			"editor.insertSpaces": true,
+			"editor.detectIndentation": false,
+			"editor.useTabStops": false,
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+					"source.fixAll": "never"
+			},
+	},
+	"[typescript]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features",
+	},
+	"[json]": {
+			"editor.formatOnSave": false,
+			"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[xml]": {
+			"editor.formatOnSave": false
+	},
+	"[plaintext]": {
+			"editor.wordWrap": "on"
+	},
+	"[markdown]": {
+			"editor.wordWrap": "on",
+			"editor.defaultFormatter": "yzhang.markdown-all-in-one",
+			"editor.formatOnSave": false,
+			"editor.quickSuggestions": {
+					"comments": "on",
+					"strings": "on",
+					"other": "on"
+			}
+	},
+	/**
+	* Linting and Validation
+	**/
+	"alex-linter.noBinary": true,
+	"alex-linter.strategy": "user",
+	"css.lint.duplicateProperties": "error",
+	"css.validate": true,
+	"less.validate": true,
+	"prettier.requireConfig": false,
+	"prettier.useEditorConfig": true,
+	"scss.validate": true,
+	"stylelint.enable": true,
+	"write-good.languages": [
+			"markdown",
+			"plaintext"
+	],
+	/**
+	* PHP
+	**/
+	"php.suggest.basic": false,
+	"php.validate.executablePath": "/opt/homebrew/bin/php",
+	"phpsab.autoRulesetSearch": false,
+	"phpsab.standard": "WordPress-Extra",
+	"phpsab.snifferArguments": [
+			"--ignore=*/wp-admin/*,*/wp-includes/*"
+	],
+	"phpsab.debug": true,
+	"phpsab.snifferEnable": true,
+	"phpsab.snifferShowSources": true,
+	"phpsab.snifferMode": "onSave",
+	/**
+	* Misc
+	**/
+	"css.format.spaceAroundSelectorSeparator": true,
+	"editor.codeLens": false,
+	"editor.guides.bracketPairs": true,
+	"editor.linkedEditing": true,
+	"editor.minimap.renderCharacters": false,
+	"editor.multiCursorLimit": 20000,
+	"editor.tabCompletion": "on",
+	"editor.unicodeHighlight.nonBasicASCII": false,
+	"emmet.triggerExpansionOnTab": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"markdown.extension.theming.decoration.renderTrailingSpace": true,
+	"svg.preview.mode": "svg",
+	"window.commandCenter": false,
+	"workbench.activityBar.location": "hidden",
+	"workbench.editor.enablePreview": true,
+	"workbench.editor.enablePreviewFromCodeNavigation": true,
+	"workbench.editor.restoreViewState": false,
+	"workbench.layoutControl.enabled": false,
+}
